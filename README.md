@@ -1,7 +1,16 @@
 # Game-Audio-Collaboration
 Repo used to manage game project for game audio module
 
+Useful tutorials:
+
+- https://www.youtube.com/watch?v=QRYGrCWumFw&ab_channel=Dave%2FGameDevelopment
+- https://www.youtube.com/watch?v=cvD7TEe0Kgs&t=0s&ab_channel=DanCS
+- https://www.youtube.com/watch?v=ieyHlYp5SLQ&ab_channel=DanCS
+- https://www.youtube.com/watch?v=gHaJUNiItmQ&ab_channel=DanCS
+- https://www.youtube.com/watch?v=F20Sr5FlUlE&ab_channel=Dave%2FGameDevelopment
+
 # Tasks for Project
+
 ## Audio:  
   - Main Menu Music
   - In-game Music
