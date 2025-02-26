@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityStandardAssets.Characters.ThirdPerson;
+using FMODUnity;
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
-    public AudioSource audioSource; 
-    public AudioClip jumpSound;
-    public AudioClip crouchSound;
+
+    [SerializeField] EventReference FootstepEvent;
+    [SerializeField] float rate;
+    [SerializeField] GameObject player;
+    [SerializeField] ThirdPersonUserControl controller;
+    public bool isWalking = true;
+    float time;
 
     private void Awake()
     {
@@ -30,26 +35,25 @@ public class SoundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // time = Time.deltaTime;
         
-    }
+        // if (isWalking && time >= rate)
+        // {
+        //     PlayFootsteps();
+        //     time = 0; // Reset time properly
+        // }
 
-    public void PlayJumpSound()
-    {
-        if (audioSource != null && jumpSound != null)
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.clip = jumpSound;
-            audioSource.Play();
+            PlayFootsteps();
         }
     }
 
-    public void PlayCrouchSound()
+    public void PlayFootsteps()
     {
-        if (audioSource != null && crouchSound != null)
-        {
-            audioSource.PlayOneShot(crouchSound);
-            audioSource.clip = jumpSound;
-            audioSource.Play();
-        }
+        Debug.Log("footstep sound played");
+        // RuntimeManager.PlayOneShotAttached(FootstepEvent, player);
+        RuntimeManager.PlayOneShot("event:/Footsteps");
+
     }
 }
