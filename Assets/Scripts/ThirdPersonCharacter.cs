@@ -93,7 +93,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				m_Crouching = true;
 
 				Debug.Log("crouch");
-
+				SoundManager.Instance.isCrouching = true;
 			}
 			else
 			{
