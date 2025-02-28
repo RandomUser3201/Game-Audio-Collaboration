@@ -9,7 +9,17 @@ Useful tutorials:
 - https://www.youtube.com/watch?v=gHaJUNiItmQ&ab_channel=DanCS
 - https://www.youtube.com/watch?v=F20Sr5FlUlE&ab_channel=Dave%2FGameDevelopment
 
-# Tasks for Project
+## Sounds:
+- Footsteps:
+- Grass: https://freesound.org/people/JanKoehl/sounds/85603/
+- Sand: https://freesound.org/people/DasDeer/sounds/161815/
+- Long grass: https://freesound.org/people/Leafs67/sounds/155589/
+- Running: https://freesound.org/people/Slave2theLight/sounds/157037/
+- Pebbles/Grass: https://freesound.org/people/LukaCafuka/sounds/752867/
+- Pebbles (last 3): https://freesound.org/people/Nox_Sound/sounds/530385/
+- Water: https://freesound.org/people/VlatkoBlazek/sounds/260979/
+
+# Tasks for Project (Ignore all 
 
 ## Audio:  
   - Main Menu Music
