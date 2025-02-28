@@ -8,13 +8,15 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
 
-    [SerializeField] EventReference FootstepEvent;
-    [SerializeField] float rate = 0.5f;
-    [SerializeField] GameObject player;
-    [SerializeField] ThirdPersonUserControl controller;
+    [SerializeField] private EventReference FootstepEvent;
+    [SerializeField] private float rate = 0.45f;
+    [SerializeField] private GameObject player;
+    [SerializeField] private ThirdPersonUserControl controller;
     public bool isWalking = true;
     public bool isCrouching = false;
     private float time = 0f;
+    private string currentSurface; 
+    private float value;
 
     private void Awake()
     {
@@ -36,15 +38,17 @@ public class SoundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Checks if player is walking
         if (controller != null && isWalking)
         {
             time += Time.deltaTime;
-            Debug.Log("controller not null, walking");
+            Debug.Log("Walking: " + isWalking);
 
+            // Rate, stops the footstep sounds from playing all at once. Controls time.
             if (time >= rate)
             {
-                Debug.Log("time = 0, play footstep");
+                Debug.Log("Time: " + time + " Rate: " + rate);
+                SurfaceDetection();
                 PlayFootsteps();
                 time = 0f;
             }   
@@ -58,14 +62,29 @@ public class SoundManager : MonoBehaviour
 
     public void PlayFootsteps()
     {
-        Debug.Log("footstep sound played");
+        Debug.Log("Footstep sound played on: " + currentSurface);
+
+        EventInstance footstepInstance = RuntimeManager.CreateInstance(FootstepEvent);
+        footstepInstance.setParameterByNameWithLabel("Surfaces", currentSurface);
+        footstepInstance.start();
+        footstepInstance.release();
+
+        // - Old code - one time testing --
         //RuntimeManager.PlayOneShotAttached(FootstepEvent, player);
-        RuntimeManager.PlayOneShot("event:/Footsteps");
-
-        // if (isWalking && isCrouching
-        // {
-
-        // })
+        // RuntimeManager.PlayOneShot("event:/Footsteps");
     }
 
+    private void SurfaceDetection()
+    {
+        RaycastHit hit;
+    
+        if (Physics.Raycast(player.transform.position, Vector3.down, out hit, 2f))
+        {
+            string tag = hit.collider.gameObject.tag;
+            currentSurface = tag;
+
+            Debug.Log("Current surface detected: " + currentSurface);
+
+        }
+    }
 }

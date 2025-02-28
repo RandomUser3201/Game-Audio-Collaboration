@@ -1,5 +1,33 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5205531530003087853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Footsteps
+  Guid:
+    Data1: 827516139
+    Data2: 1126648860
+    Data3: -196562782
+    Data4: 256907083
+  Banks:
+  - {fileID: 675981519037650133}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2846183740918191817}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4009857030909711148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +43,10 @@ MonoBehaviour:
   Path: ../GACfmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638761256018666638
+  lastModified: 638762982988245519
   FileSizes:
   - Name: Desktop
-    Value: 770
+    Value: 828
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -36,13 +64,13 @@ MonoBehaviour:
   - {fileID: -4009857030909711148}
   - {fileID: 675981519037650133}
   EditorEvents:
-  - {fileID: 7936420533398901833}
+  - {fileID: -5205531530003087853}
   EditorParameters: []
   MasterBanks:
   - {fileID: 675981519037650133}
   StringsBanks:
   - {fileID: -4009857030909711148}
-  cacheTime: 638761256018666638
+  cacheTime: 638762982988245519
   cacheVersion: 131846
 --- !u!114 &675981519037650133
 MonoBehaviour:
@@ -59,12 +87,12 @@ MonoBehaviour:
   Path: ../GACfmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638761256018645683
+  lastModified: 638762982988240462
   FileSizes:
   - Name: Desktop
-    Value: 22400
+    Value: 41120
   Exists: 1
---- !u!114 &7936420533398901833
+--- !u!114 &2846183740918191817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,21 +101,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Footsteps
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Surfaces
   m_EditorClassIdentifier: 
-  Path: event:/Footsteps
-  Guid:
-    Data1: 1285931106
-    Data2: 1093871559
-    Data3: -1332127305
-    Data4: 940192279
-  Banks:
-  - {fileID: 675981519037650133}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Name: Surfaces
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4165675440
+    data2: 492430861
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Grass
+  - Dirt
+  Exists: 1
