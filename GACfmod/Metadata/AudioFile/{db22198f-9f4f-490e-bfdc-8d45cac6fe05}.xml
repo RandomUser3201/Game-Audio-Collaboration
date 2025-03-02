@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{db22198f-9f4f-490e-bfdc-8d45cac6fe05}">
+		<property name="assetPath">
+			<value>fire_SFX.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>120.44860416666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8bd11529-0cb4-4514-ae09-f2a54a28849d}</destination>
+		</relationship>
+	</object>
+</objects>

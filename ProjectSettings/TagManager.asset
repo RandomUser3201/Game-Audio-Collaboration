@@ -9,6 +9,7 @@ TagManager:
   - Rock
   - Dirt
   - Grass
+  - Concrete
   layers:
   - Default
   - TransparentFX

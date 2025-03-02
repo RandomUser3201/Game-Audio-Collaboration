@@ -78,7 +78,7 @@ public class SoundManager : MonoBehaviour
     {
         RaycastHit hit;
     
-        if (Physics.Raycast(player.transform.position, Vector3.down, out hit, 2f))
+        if (Physics.Raycast(player.transform.position, Vector3.down, out hit, 0.5f))
         {
             string tag = hit.collider.gameObject.tag;
             currentSurface = tag;
