@@ -26,13 +26,13 @@ Repo used to manage game project for game audio module
 - https://www.zapsplat.com/music/boxer-wearing-boxing-glove-single-punch-hit-face-or-body-crunchy-hit-9/
 
 
-# Tasks for Project (Ignore all 
+# Tasks for Project
 
 ## Audio:  
   - Main Menu Music
   - In-game Music
   - Button Interaction SFX
-  - Pause Menu Music 
+  - Pause Menu Music (will be in-game music but edited)
   - NPC Interaction
 
   - Animations:
@@ -45,7 +45,7 @@ Repo used to manage game project for game audio module
     - Birds chirping
     - Grass interaction
     - Water
-    - Fire
+    - Fire 
     
 ## GUI (Photoshop, Pixlr): 
   - Main Menu:
@@ -78,19 +78,3 @@ Repo used to manage game project for game audio module
   - Water fountain 
   - Well 
   - Sword 
-
- ## Key Gameplay features:
-  - One Enemy Type (for now) - Chase, Patrol, Catch 
-  - Smooth player animations
-  - Weather elements 
-  - Day/Night cycle 
-  - 
-	
-## Gameplay:
-
-Exploring through samurai village, collecting coins and avoiding enemies. Perhaps some combat will be implemented. 
-- Collision with Enemy, -1 life. 
-- Collision with grass or trees, trigger sound effect.
-- If player has 10 coins, can interact with NPC for an item (maybe sword or healing potion).
-- NPCs will make constantly make sound, depending on how close player is to NPC, volume increases/decreases.
-
