@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
@@ -17,6 +18,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         
         [SerializeField] private float m_SprintMultiplier = 40f; 
         private float m_MoveSpeedMultiplier = 1f;
+        public bool outOfZone = false;
 
 
         private void Start()
@@ -68,7 +70,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         }
 
-
         // Fixed update is called in sync with physics
         private void FixedUpdate()
         {
@@ -100,5 +101,49 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
             //Debug.Log("Final Move Speed: " + m_Move * m_MoveSpeedMultiplier);
         }
+
+        
+    public void OnTriggerEnter(Collider other)
+    {
+        string newArea = "";
+
+        // Area Detection
+        Debug.Log("Triggered by: " + other.gameObject.name); 
+
+        if (other.CompareTag("Forest"))
+        {
+            Debug.Log("Forest trigger");
+            newArea = "Forest";
+            //SoundManager.Instance.currentArea = "Forest";
+            //SoundManager.Instance.PlayAreaSound();
+        }
+
+        else if (other.CompareTag("Exploration"))
+        {
+            Debug.Log("Exploration trigger");
+            newArea = "Exploration";
+            // SoundManager.Instance.currentArea = "Exploration";
+            // SoundManager.Instance.PlayAreaSound();
+        }
+
+        else if (!other.CompareTag("Exploration") && !other.CompareTag("Forest"))
+        {
+            outOfZone = true;
+            newArea = "";
+            Debug.Log("Player is out of Zone");
+            return;
+        }
+
+        if (newArea != SoundManager.Instance.currentArea)
+        {
+            Debug.Log($"New Area: " + newArea + " - Current Area: " + SoundManager.Instance.currentArea);
+            SoundManager.Instance.currentArea = newArea;
+            SoundManager.Instance.PlayAreaSound();
+            Debug.Log($"2 New Area: " + newArea + " - 2 Current Area: " + SoundManager.Instance.currentArea);
+
+        }
+
+        
+    }
     }
 }

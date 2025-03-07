@@ -40,7 +40,7 @@ public class MainMenuManager : MonoBehaviour
         Debug.Log("quit");
     }
 
-    // Options
+    // Options Panel
     public void AudioButtonF()
     {
         Debug.Log("Audio");
@@ -55,7 +55,7 @@ public class MainMenuManager : MonoBehaviour
         optionsPanel.SetActive(false);
     }
 
-    // Audio
+    // Audio Panel
 
     public void BackButton2F()
     {

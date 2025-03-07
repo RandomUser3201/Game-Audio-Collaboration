@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{16df739b-589a-4332-89cf-a28cc5b8685f}">
+		<property name="assetPath">
+			<value>Music_1_Tsuki ga Kirei.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>76.363645833333337</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8bd11529-0cb4-4514-ae09-f2a54a28849d}</destination>
+		</relationship>
+	</object>
+</objects>
