@@ -1,5 +1,4 @@
-﻿using FMOD.Studio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
@@ -16,14 +15,14 @@ namespace FMODUnity
 
         private static readonly List<string> pageNames = new List<string>
         {
-            L10n.Tr("Welcome"),
-            L10n.Tr("Updating"),
-            L10n.Tr("Linking"),
-            L10n.Tr("Listener"),
-            L10n.Tr("Unity Audio"),
-            L10n.Tr("Unity Sources"),
-            L10n.Tr("Source Control"),
-            L10n.Tr("End")
+            "Welcome",
+            "Updating",
+            "Linking",
+            "Listener",
+            "Unity Audio",
+            "Unity Sources",
+            "Source Control",
+            "End"
         };
 
         private static readonly List<bool> pageComplete = new List<bool>(new bool[(int)PAGES.Max]);
@@ -31,15 +30,16 @@ namespace FMODUnity
         private static readonly List<UpdateTask> updateTasks = new List<UpdateTask>() {
             UpdateTask.Create(
                 type: UpdateTaskType.ReorganizePluginFiles,
-                name: L10n.Tr("Reorganize Plugin Files"),
-                description: L10n.Tr("Move FMOD for Unity files to match the latest layout."),
+                name: "Reorganize Plugin Files",
+                description: "Move FMOD for Unity files to match the latest layout.",
                 execute: FileReorganizer.ShowWindow,
                 checkComplete: FileReorganizer.IsUpToDate
             ),
             UpdateTask.Create(
                 type: UpdateTaskType.UpdateEventReferences,
-                name: L10n.Tr("Update Event References"),
-                description: L10n.Tr("Find event references that use the obsolete [EventRef] attribute and update them to use the EventReference type."),
+                name: "Update Event References",
+                description: "Find event references that use the obsolete [EventRef] attribute " +
+                    "and update them to use the EventReference type.",
                 execute: EventReferenceUpdater.ShowWindow,
                 checkComplete: EventReferenceUpdater.IsUpToDate
             ),
@@ -51,7 +51,7 @@ namespace FMODUnity
 
         private AudioListener[] unityListeners;
         private StudioListener[] fmodListeners;
-        private Vector2 scroll1, scroll2, pageScrollPos;
+        private Vector2 scroll1, scroll2;
         private Vector2 stagingDetailsScroll;
         private bool bFoundUnityListener;
         private bool bFoundFmodListener;
@@ -77,6 +77,8 @@ namespace FMODUnity
         private Texture2D tickTexture;
         private Texture2D crossTexture;
         private GUIStyle iconStyle;
+
+        private const string backButtonText = "Back";
 
         private SimpleTreeView m_SimpleTreeView;
         private TreeViewState m_TreeViewState;
@@ -207,10 +209,11 @@ fmod_editor.log";
         [MenuItem("FMOD/Setup Wizard")]
         public static void ShowAssistant()
         {
-            instance = (SetupWizardWindow)GetWindow(typeof(SetupWizardWindow), true, L10n.Tr("FMOD Setup Wizard"));
+            instance = (SetupWizardWindow)GetWindow(typeof(SetupWizardWindow), true, "FMOD Setup Wizard");
             instance.ShowUtility();
-            instance.minSize = new Vector2(600, 400);
-            var position = new Rect(Vector2.zero, new Vector2(800, 600));
+            instance.minSize = new Vector2(750, 500);
+            instance.maxSize = instance.minSize;
+            var position = new Rect(Vector2.zero, instance.minSize);
             Vector2 screenCenter = new Vector2(Screen.currentResolution.width, Screen.currentResolution.height) / 2;
             position.center = screenCenter / EditorGUIUtility.pixelsPerPoint;
             instance.position = position;
@@ -268,7 +271,6 @@ fmod_editor.log";
                 titleLeftStyle = new GUIStyle(descriptionStyle);
                 titleLeftStyle.fontStyle = FontStyle.Bold;
 
-                descriptionStyle.fixedWidth = 350;
                 columnStyle = new GUIStyle();
                 columnStyle.margin.left = 50;
                 columnStyle.margin.right = 50;
@@ -290,27 +292,22 @@ fmod_editor.log";
                 Breadcrumbs();
 
                 // Draw Body
-                using (new EditorGUILayout.VerticalScope("box", GUILayout.ExpandHeight(true), GUILayout.ExpandWidth(true)))
+                using (new EditorGUILayout.VerticalScope("box", GUILayout.ExpandHeight(true)))
                 {
-                    using (var scrollView = new EditorGUILayout.ScrollViewScope(pageScrollPos))
+                    EditorGUILayout.Space();
+                    EditorGUILayout.Space();
+                    EditorGUILayout.Space();
+
+                    switch (currentPage)
                     {
-                        pageScrollPos = scrollView.scrollPosition;
-
-                        EditorGUILayout.Space();
-                        EditorGUILayout.Space();
-                        EditorGUILayout.Space();
-
-                        switch (currentPage)
-                        {
-                            case PAGES.Welcome: WelcomePage(); break;
-                            case PAGES.Updating: UpdatingPage(); break;
-                            case PAGES.Linking: LinkingPage(); break;
-                            case PAGES.Listener: ListenerPage(); break;
-                            case PAGES.UnityAudio: DisableUnityAudioPage(); break;
-                            case PAGES.UnitySources: UnitySources(); break;
-                            case PAGES.SourceControl: SourceControl(); break;
-                            case PAGES.End: EndPage(); break;
-                        }
+                        case PAGES.Welcome: WelcomePage(); break;
+                        case PAGES.Updating: UpdatingPage(); break;
+                        case PAGES.Linking: LinkingPage(); break;
+                        case PAGES.Listener: ListenerPage(); break;
+                        case PAGES.UnityAudio: DisableUnityAudioPage(); break;
+                        case PAGES.UnitySources: UnitySources(); break;
+                        case PAGES.SourceControl: SourceControl(); break;
+                        case PAGES.End: EndPage(); break;
                     }
 
                     Buttons();
@@ -327,7 +324,7 @@ fmod_editor.log";
                             {
                                 bool hide = Settings.Instance.HideSetupWizard;
 
-                                hide = EditorGUILayout.Toggle(L10n.Tr("Do not display this again"), hide);
+                                hide = EditorGUILayout.Toggle("Do not display this again", hide);
 
                                 if (check.changed)
                                 {
@@ -422,14 +419,14 @@ fmod_editor.log";
         {
             GUILayout.FlexibleSpace();
 
-            string message = string.Format(L10n.Tr("Welcome to FMOD for Unity {0}."),
+            string message = string.Format("Welcome to FMOD for Unity {0}.",
                 EditorUtils.VersionString(FMOD.VERSION.number));
 
             EditorGUILayout.LabelField(message, titleStyle);
 
             EditorGUILayout.Space();
 
-            EditorGUILayout.LabelField(L10n.Tr("This setup wizard will help you configure your project to use FMOD."), titleStyle);
+            EditorGUILayout.LabelField("This setup wizard will help you configure your project to use FMOD.", titleStyle);
 
             GUILayout.FlexibleSpace();
         }
@@ -465,11 +462,12 @@ fmod_editor.log";
 
         private void UpdatingPage()
         {
-            EditorGUILayout.LabelField(L10n.Tr("If you are updating an existing FMOD installation, you may need to perform some update tasks."), titleLeftStyle);
+            EditorGUILayout.LabelField("If you are updating an existing FMOD installation, you may need to " +
+                "perform some update tasks.", titleLeftStyle);
 
             GUILayout.FlexibleSpace();
 
-            EditorGUILayout.LabelField(L10n.Tr("Choose an update task to perform:"), titleStyle);
+            EditorGUILayout.LabelField("Choose an update task to perform:", titleStyle);
 
             EditorGUILayout.Space();
 
@@ -511,55 +509,57 @@ fmod_editor.log";
 
         private void LinkingPage()
         {
-            EditorGUILayout.LabelField(L10n.Tr("In order to access your FMOD Studio content you need to locate the FMOD Studio Project or the .bank files that FMOD Studio produces, and configure a few other settings."), titleLeftStyle);
+            EditorGUILayout.LabelField("In order to access your FMOD Studio content you need to locate the FMOD Studio Project" +
+                " or the .bank files that FMOD Studio produces, and configure a few other settings.", titleLeftStyle);
             GUILayout.FlexibleSpace();
 
-            EditorGUILayout.LabelField(L10n.Tr("Choose how to access your FMOD Studio content:"), titleLeftStyle);
+            EditorGUILayout.LabelField("Choose how to access your FMOD Studio content:", titleLeftStyle);
 
             EditorGUILayout.Space();
-            using (new GUILayout.VerticalScope("box"))
+            using (new GUILayout.HorizontalScope())
             {
-                float indent = 5;
-                var serializedObject = new SerializedObject(Settings.Instance);
-
-                var boxStyle = new GUIStyle();
-                boxStyle.fixedHeight = 10;
-                using (new GUILayout.HorizontalScope())
+                using (new GUILayout.VerticalScope("box"))
                 {
-                    GUILayout.Space(indent);
-                    if (GUILayout.Button(L10n.Tr("FMOD Studio Project"), sourceButtonStyle))
-                    {
-                        SettingsEditor.BrowseForSourceProjectPath(serializedObject);
-                    }
-                    GUILayout.Label(L10n.Tr("If you have the complete FMOD Studio Project."), descriptionStyle, GUILayout.Height(sourceButtonStyle.fixedHeight));
+                    float indent = 5;
+                    var serializedObject = new SerializedObject(Settings.Instance);
 
-                    GUILayout.FlexibleSpace();
-                }
-                EditorGUILayout.Space();
-                using (new GUILayout.HorizontalScope())
-                {
-                    GUILayout.Space(indent);
-                    if (GUILayout.Button("Single Platform Build", sourceButtonStyle))
+                    var boxStyle = new GUIStyle();
+                    boxStyle.fixedHeight = 10;
+                    using (new GUILayout.HorizontalScope())
                     {
-                        SettingsEditor.BrowseForSourceBankPath(serializedObject);
+                        GUILayout.Space(indent);
+                        if (GUILayout.Button("FMOD Studio Project", sourceButtonStyle))
+                        {
+                            SettingsEditor.BrowseForSourceProjectPath(serializedObject);
+                        }
+                        GUILayout.Label("If you have the complete FMOD Studio Project.",
+                            descriptionStyle, GUILayout.Height(sourceButtonStyle.fixedHeight));
                     }
-                    EditorGUILayout.LabelField(L10n.Tr("If you have the contents of the Build folder for a single platform."),
-                        descriptionStyle, GUILayout.Height(sourceButtonStyle.fixedHeight));
-                    GUILayout.FlexibleSpace();
-                }
-                EditorGUILayout.Space();
-
-                using (new GUILayout.HorizontalScope())
-                {
-                    GUILayout.Space(indent);
-                    if (GUILayout.Button(L10n.Tr("Multiple Platform Build"), sourceButtonStyle))
+                    EditorGUILayout.Space();
+                    using (new GUILayout.HorizontalScope())
                     {
-                        SettingsEditor.BrowseForSourceBankPath(serializedObject, true);
+                        GUILayout.Space(indent);
+                        if (GUILayout.Button("Single Platform Build", sourceButtonStyle))
+                        {
+                            SettingsEditor.BrowseForSourceBankPath(serializedObject);
+                        }
+                        EditorGUILayout.LabelField("If you have the contents of the Build folder for a single platform.",
+                            descriptionStyle, GUILayout.Height(sourceButtonStyle.fixedHeight));
+                        GUILayout.FlexibleSpace();
                     }
-                    EditorGUILayout.LabelField(L10n.Tr("If you have the contents of the Build folder for multiple platforms, with each platform in its own subdirectory."), descriptionStyle, GUILayout.Height(sourceButtonStyle.fixedHeight));
-                    GUILayout.FlexibleSpace();
+                    EditorGUILayout.Space();
+                    using (new GUILayout.HorizontalScope())
+                    {
+                        GUILayout.Space(indent);
+                        if (GUILayout.Button("Multiple Platform Build", sourceButtonStyle))
+                        {
+                            SettingsEditor.BrowseForSourceBankPath(serializedObject, true);
+                        }
+                        EditorGUILayout.LabelField("If you have the contents of the Build folder for multiple platforms, " +
+                            "with each platform in its own subdirectory.",
+                            descriptionStyle, GUILayout.Height(sourceButtonStyle.fixedHeight));
+                    }
                 }
-                EditorGUILayout.Space();
             }
 
             if (IsStudioLinked())
@@ -583,17 +583,17 @@ fmod_editor.log";
 
                         if (settings.HasSourceProject)
                         {
-                            EditorGUILayout.LabelField(L10n.Tr("Using the FMOD Studio project at:"), descriptionStyle);
+                            EditorGUILayout.LabelField("Using the FMOD Studio project at:", descriptionStyle);
                             EditorGUILayout.LabelField(settings.SourceProjectPath, descriptionStyle);
                         }
                         else if (settings.HasPlatforms)
                         {
-                            EditorGUILayout.LabelField(L10n.Tr("Using the multiple platform build at:"), descriptionStyle);
+                            EditorGUILayout.LabelField("Using the multiple platform build at:", descriptionStyle);
                             EditorGUILayout.LabelField(settings.SourceBankPath, descriptionStyle);
                         }
                         else
                         {
-                            EditorGUILayout.LabelField(L10n.Tr("Using the single platform build at:"), descriptionStyle);
+                            EditorGUILayout.LabelField("Using the single platform build at:", descriptionStyle);
                             EditorGUILayout.LabelField(settings.SourceBankPath, descriptionStyle);
                         }
                     }
@@ -609,8 +609,8 @@ fmod_editor.log";
 
         private void ListenerPage()
         {
-            EditorGUILayout.LabelField(L10n.Tr("If you do not intend to use the built in Unity audio, you can choose to replace the Audio Listener with the FMOD Studio Listener.\n"), titleLeftStyle);
-            EditorGUILayout.LabelField(L10n.Tr("Adding the FMOD Studio Listener component to the main camera provides the FMOD Engine with the information it needs to play 3D events correctly."), titleLeftStyle);
+            EditorGUILayout.LabelField("If you do not intend to use the built in Unity audio, you can choose to replace the Audio Listener with the FMOD Studio Listener.\n", titleLeftStyle);
+            EditorGUILayout.LabelField("Adding the FMOD Studio Listener component to the main camera provides the FMOD Engine with the information it needs to play 3D events correctly.", titleLeftStyle);
             EditorGUILayout.Space();
             GUILayout.FlexibleSpace();
 
@@ -633,7 +633,7 @@ fmod_editor.log";
                 {
                     GUILayout.FlexibleSpace();
 
-                    if (GUILayout.Button(L10n.Tr("Replace Unity Listener(s) with FMOD Audio Listener."), buttonStyle))
+                    if (GUILayout.Button("Replace Unity " + ((unityListeners != null && unityListeners.Length > 1) ? "Listeners" : "Listener") + " with FMOD Audio Listener.", buttonStyle))
                     {
                         for (int i = 0; i < unityListeners.Length; i++)
                         {
@@ -671,7 +671,7 @@ fmod_editor.log";
                     using (new EditorGUILayout.HorizontalScope())
                     {
                         GUILayout.FlexibleSpace();
-                        EditorGUILayout.LabelField((bUnityListenerType ? "Unity" : "FMOD") + L10n.Tr(" Listener(s) found: ") + listeners.Length, titleStyle, GUILayout.ExpandWidth(true));
+                        EditorGUILayout.LabelField(listeners.Length + " " + (bUnityListenerType ? "Unity" : "FMOD") + " " + (listeners.Length > 1 ? "Listeners" : "Listener") + " found.", titleStyle, GUILayout.ExpandWidth(true));
                         GUILayout.FlexibleSpace();
                     }
 
@@ -695,7 +695,7 @@ fmod_editor.log";
                     using (new EditorGUILayout.HorizontalScope())
                     {
                         GUILayout.FlexibleSpace();
-                        EditorGUILayout.LabelField((bUnityListenerType ? "Unity" : "FMOD") + L10n.Tr(" Listener(s) found: ") + listeners.Length, titleStyle);
+                        EditorGUILayout.LabelField("No " + (bUnityListenerType ? "Unity" : "FMOD") + " Listeners found.", titleStyle);
                         GUILayout.FlexibleSpace();
                     }
                     GUILayout.FlexibleSpace();
@@ -705,7 +705,7 @@ fmod_editor.log";
 
         private void DisableUnityAudioPage()
         {
-            EditorGUILayout.LabelField(L10n.Tr("We recommend that you disable the built-in Unity audio for all platforms, to prevent it from consuming system audio resources that the FMOD Engine needs."), titleStyle);
+            EditorGUILayout.LabelField("We recommend that you disable the built-in Unity audio for all platforms, to prevent it from consuming system audio resources that the FMOD Engine needs.", titleStyle);
             GUILayout.FlexibleSpace();
 
             var audioManager = AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/AudioManager.asset")[0];
@@ -717,7 +717,7 @@ fmod_editor.log";
                 using (new EditorGUI.DisabledGroupScope(prop.boolValue))
                 {
                     GUILayout.FlexibleSpace();
-                    if (GUILayout.Button(prop.boolValue ? L10n.Tr("Built in audio has been disabled") : L10n.Tr("Disable built in audio"), buttonStyle))
+                    if (GUILayout.Button(prop.boolValue ? "Built in audio has been disabled" : "Disable built in audio", buttonStyle))
                     {
                         prop.boolValue = true;
                         serializedManager.ApplyModifiedProperties();
@@ -737,7 +737,7 @@ fmod_editor.log";
         {
             if (unityAudioSources != null && unityAudioSources.Length > 0)
             {
-                EditorGUILayout.LabelField(L10n.Tr("Listed below are all the Unity Audio Sources found in the currently loaded scenes and the Assets directory.\nSelect an Audio Source and replace it with an FMOD Studio Event Emitter."), titleStyle);
+                EditorGUILayout.LabelField("Listed below are all the Unity Audio Sources found in the currently loaded scenes and the Assets directory.\nSelect an Audio Source and replace it with an FMOD Studio Event Emitter.", titleStyle);
                 EditorGUILayout.Space();
 
                 if (m_SimpleTreeView == null)
@@ -754,19 +754,20 @@ fmod_editor.log";
             else
             {
                 GUILayout.FlexibleSpace();
-                EditorGUILayout.LabelField(L10n.Tr("No Unity Audio Sources have been found!"), titleStyle);
+                EditorGUILayout.LabelField("No Unity Audio Sources have been found!", titleStyle);
                 GUILayout.FlexibleSpace();
             }
         }
 
         private void SourceControl()
         {
-            EditorGUILayout.LabelField(L10n.Tr("There are a number of files produced by FMOD for Unity that should be ignored by source control. Here is an example of what you should add to your source control ignore file:"), titleLeftStyle);
+            EditorGUILayout.LabelField("There are a number of files produced by FMOD for Unity that should be ignored by source control. " +
+                "Here is an example of what you should add to your source control ignore file:", titleLeftStyle);
             GUILayout.FlexibleSpace();
 
             using (new EditorGUILayout.VerticalScope("box"))
             {
-                EditorGUILayout.TextArea(IgnoreFileText, GUILayout.Width(568));
+                EditorGUILayout.TextArea(IgnoreFileText);
             }
 
             pageComplete[(int)PAGES.SourceControl] = true;
@@ -804,18 +805,18 @@ fmod_editor.log";
             if (completed)
             {
                 // All complete
-                msg = L10n.Tr("FMOD for Unity has been set up successfully!");
+                msg = "FMOD for Unity has been set up successfully!";
             }
             // Essential
             else if (pageComplete[(int)PAGES.Linking])
             {
                 // Partial complete (linking done)
-                msg = L10n.Tr("FMOD for Unity has been partially set up.");
+                msg = "FMOD for Unity has been partially set up.";
             }
             else
             {
                 // Linking not done
-                msg = L10n.Tr("FMOD for Unity has not finished being set up.\nLinking to a project or banks is required.");
+                msg = "FMOD for Unity has not finished being set up.\nLinking to a project or banks is required.";
             }
 
             GUILayout.FlexibleSpace();
@@ -826,17 +827,23 @@ fmod_editor.log";
             {
                 GUILayout.FlexibleSpace();
 
-                if (GUILayout.Button(L10n.Tr(" Integration Manual "), buttonStyle))
+                if (GUILayout.Button(" Integration Manual ", buttonStyle))
                 {
                     EditorUtils.OnlineManual();
                 }
 
+                GUILayout.FlexibleSpace();
+            }
 
-                if (GUILayout.Button(L10n.Tr(" FMOD Settings "), buttonStyle))
+            GUILayout.Space(20);
+            using (new EditorGUILayout.HorizontalScope())
+            {
+                GUILayout.FlexibleSpace();
+
+                if (GUILayout.Button(" FMOD Settings ", buttonStyle))
                 {
                     EditorSettings.EditSettings();
                 }
-                GUILayout.Space(18);
 
                 GUILayout.FlexibleSpace();
             }
@@ -859,7 +866,7 @@ fmod_editor.log";
                 GUILayout.FlexibleSpace();
                 if (currentPage != 0)
                 {
-                    if (GUILayout.Button(L10n.Tr("Back"), navButtonStyle))
+                    if (GUILayout.Button(backButtonText, navButtonStyle))
                     {
                         if (currentPage != 0)
                         {
@@ -869,10 +876,11 @@ fmod_editor.log";
                 }
 
                 string button2Text = "Next";
-                if (currentPage == 0) button2Text = L10n.Tr("Start");
-                else if (currentPage == PAGES.End) button2Text = L10n.Tr("Close");
-                else button2Text = L10n.Tr("Next");
+                if (currentPage == 0) button2Text = "Start";
+                else if (currentPage == PAGES.End) button2Text = "Close";
+                else button2Text = "Next";
 
+                EditorGUILayout.Space();
                 if (GUILayout.Button(button2Text, navButtonStyle))
                 {
                     if (currentPage == PAGES.End)
@@ -890,7 +898,7 @@ fmod_editor.log";
         {
             GUILayout.Space(25);
 
-            string message = string.Format(L10n.Tr("Welcome to FMOD for Unity {0}."),
+            string message = string.Format("Welcome to FMOD for Unity {0}.",
                 EditorUtils.VersionString(FMOD.VERSION.number));
 
             EditorGUILayout.LabelField(message, titleStyle);
@@ -898,8 +906,8 @@ fmod_editor.log";
             EditorGUILayout.Space();
 
             EditorGUILayout.LabelField(
-                L10n.Tr("To complete the installation, we need to update the FMOD native libraries.\n") +
-                L10n.Tr("This involves a few steps:"), titleStyle);
+                "To complete the installation, we need to update the FMOD native libraries.\n" +
+                "This involves a few steps:", titleStyle);
 
             EditorGUILayout.Space();
 
@@ -928,7 +936,7 @@ fmod_editor.log";
 
                 EditorGUILayout.Space();
 
-                EditorGUILayout.LabelField(L10n.Tr("Next step:"), titleStyle);
+                EditorGUILayout.LabelField("Next step:", titleStyle);
 
                 using (new GUILayout.HorizontalScope())
                 {
@@ -947,9 +955,7 @@ fmod_editor.log";
                 using (var scope = new EditorGUILayout.ScrollViewScope(stagingDetailsScroll))
                 {
                     stagingDetailsScroll = scope.scrollPosition;
-                    GUIStyle longDescStyle = descriptionStyle;
-                    longDescStyle.fixedWidth = 0;
-                    EditorGUILayout.LabelField(nextStagingStep.Details, longDescStyle);
+                    EditorGUILayout.LabelField(nextStagingStep.Details, descriptionStyle);
                 }
             }
         }
@@ -1132,12 +1138,12 @@ fmod_editor.log";
             using (new EditorGUILayout.HorizontalScope())
             {
                 var style = "miniButton";
-                if (GUILayout.Button(L10n.Tr("Expand All"), style))
+                if (GUILayout.Button("Expand All", style))
                 {
                     ExpandAll();
                 }
 
-                if (GUILayout.Button(L10n.Tr("Collapse All"), style))
+                if (GUILayout.Button("Collapse All", style))
                 {
                     CollapseAll();
                 }

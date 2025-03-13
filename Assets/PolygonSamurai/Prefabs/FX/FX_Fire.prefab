@@ -4867,11 +4867,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -557639020
-      Data2: 1332640707
-      Data3: 1745368762
-      Data4: 2031624722
-    Path: event:/Environment/Fire
+      Data1: -109512166
+      Data2: 1299126409
+      Data3: 86711475
+      Data4: -2073651225
+    Path: event:/Fire
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
