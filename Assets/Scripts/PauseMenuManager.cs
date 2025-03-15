@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using UnityEngine.EventSystems;
+using FMODUnity;
+using FMOD.Studio;
+
 public class PauseMenuManager : MonoBehaviour
 {
     public GameObject menuPanel;
@@ -13,6 +16,16 @@ public class PauseMenuManager : MonoBehaviour
     public GameObject audioU;
     public GameObject audioM;
 
+    public UnityEngine.UI.Slider masterSlider;
+    public UnityEngine.UI.Slider musicSlider;
+    public UnityEngine.UI.Slider sfxSlider;
+
+    private VCA masterVCA;
+    private VCA musicVCA;
+    private VCA sfxVCA;
+
+    private bool isMuted = false;
+    private float lastVol = 1f;
 
     // Start is called before the first frame update
     public void Awake()
@@ -21,6 +34,22 @@ public class PauseMenuManager : MonoBehaviour
         optionsPanel.SetActive(false);
         audioPanel.SetActive(false);
         audioM.SetActive(false);
+
+        masterSlider.onValueChanged.AddListener(SetMasterVolume);
+        musicSlider.onValueChanged.AddListener(SetMusicVolume);
+        sfxSlider.onValueChanged.AddListener(SetSFXVolume);
+        
+        masterVCA = RuntimeManager.GetVCA("vca:/Master");
+        musicVCA = RuntimeManager.GetVCA("vca:/Music");
+        sfxVCA = RuntimeManager.GetVCA("vca:/SFX");
+
+        masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1f);
+        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1f);
+        sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume", 1f);
+
+        SetMasterVolume(masterSlider.value);
+        SetMusicVolume(musicSlider.value);
+        SetSFXVolume(sfxSlider.value);
     }
 
     public void Update()
@@ -102,7 +131,42 @@ public class PauseMenuManager : MonoBehaviour
 
     public void audioToggle()
     {
-        audioM.SetActive(true);
-        audioU.SetActive(false);
+        if (!isMuted)
+        {
+            lastVol = masterSlider.value; 
+            SetMasterVolume(0f); 
+            audioM.SetActive(true); 
+            audioU.SetActive(false); 
+            isMuted = true; 
+        }
+        else
+        {
+            SetMasterVolume(lastVol); 
+            masterSlider.value = lastVol;
+            audioM.SetActive(false);
+            audioU.SetActive(true); 
+            isMuted = false;
+        }
     }
+
+    // Audio Sliders
+
+    public void SetMasterVolume(float volume)
+    {
+        masterVCA.setVolume(volume);
+        PlayerPrefs.SetFloat("MasterVolume", volume);
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        musicVCA.setVolume(volume);
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        sfxVCA.setVolume(volume);
+        PlayerPrefs.SetFloat("SFXVolume", volume);
+    }
+
 }

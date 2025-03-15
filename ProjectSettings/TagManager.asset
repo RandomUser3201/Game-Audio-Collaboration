@@ -12,6 +12,7 @@ TagManager:
   - Concrete
   - Forest
   - Village
+  - Song2
   layers:
   - Default
   - TransparentFX
