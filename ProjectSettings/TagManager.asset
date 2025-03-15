@@ -10,8 +10,8 @@ TagManager:
   - Dirt
   - Grass
   - Concrete
-  - Exploration
   - Forest
+  - Village
   layers:
   - Default
   - TransparentFX

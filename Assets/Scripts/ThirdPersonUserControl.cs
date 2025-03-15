@@ -103,47 +103,46 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         }
 
         
-    public void OnTriggerEnter(Collider other)
-    {
-        string newArea = "";
+    // public void OnTriggerEnter(Collider other)
+    // {
+    //     string newArea = "";
 
-        // Area Detection
-        Debug.Log("Triggered by: " + other.gameObject.name); 
+    //     // Area Detection
+    //     Debug.Log("Triggered by: " + other.gameObject.name); 
 
-        if (other.CompareTag("Forest"))
-        {
-            Debug.Log("Forest trigger");
-            newArea = "Forest";
-            //SoundManager.Instance.currentArea = "Forest";
-            //SoundManager.Instance.PlayAreaSound();
-        }
+    //     if (other.CompareTag("Forest"))
+    //     {
+    //         Debug.Log("Forest trigger");
+    //         newArea = "Forest";
+    //         //SoundManager.Instance.currentArea = "Forest";
+    //         //SoundManager.Instance.PlayAreaSound();
+    //     }
 
-        else if (other.CompareTag("Exploration"))
-        {
-            Debug.Log("Exploration trigger");
-            newArea = "Exploration";
-            // SoundManager.Instance.currentArea = "Exploration";
-            // SoundManager.Instance.PlayAreaSound();
-        }
+    //     else if (other.CompareTag("Exploration"))
+    //     {
+    //         Debug.Log("Exploration trigger");
+    //         newArea = "Exploration";
+    //         // SoundManager.Instance.currentArea = "Exploration";
+    //         // SoundManager.Instance.PlayAreaSound();
+    //     }
 
-        else if (!other.CompareTag("Exploration") && !other.CompareTag("Forest"))
-        {
-            outOfZone = true;
-            newArea = "";
-            Debug.Log("Player is out of Zone");
-            return;
-        }
+    //     else if (other.CompareTag("Untagged") || other.CompareTag("Dirt") )
+    //     {
+    //         outOfZone = true;
+    //         newArea = "";
+    //         Debug.Log("Player is out of Zone");
+    //         return;
+    //     }
 
-        if (newArea != SoundManager.Instance.currentArea)
-        {
-            Debug.Log($"New Area: " + newArea + " - Current Area: " + SoundManager.Instance.currentArea);
-            SoundManager.Instance.currentArea = newArea;
-            SoundManager.Instance.PlayAreaSound();
-            Debug.Log($"2 New Area: " + newArea + " - 2 Current Area: " + SoundManager.Instance.currentArea);
+    //     if (newArea != SoundManager.Instance.currentArea)
+    //     {
+    //         Debug.Log($"New Area: " + newArea + " - Current Area: " + SoundManager.Instance.currentArea);
+    //         SoundManager.Instance.currentArea = newArea;
+    //         Debug.Log($"2 New Area: " + newArea + " - 2 Current Area: " + SoundManager.Instance.currentArea);
 
-        }
+    //     }
 
         
-    }
+    // }
     }
 }

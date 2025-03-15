@@ -9,16 +9,21 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance { get; private set; }
 
     [SerializeField] private EventReference FootstepEvent;
-    [SerializeField] private EventReference AreaEvent;
+    [SerializeField] private EventReference ForestEvent;
+    [SerializeField] private EventReference VillageEvent;
+    [SerializeField] private EventReference Song2Event;
+    public EventInstance areaInstance;
+
+
     [SerializeField] private float rate = 0.45f;
     [SerializeField] private GameObject player;
     [SerializeField] private ThirdPersonUserControl controller;
     public bool isWalking = true;
     public bool isCrouching = false;
     private float time = 0f;
+
     private string currentSurface; 
-    public string currentArea;
-    public EventInstance areaInstance;
+    public string currentArea = "";
 
     private void Awake()
     {
@@ -59,10 +64,10 @@ public class SoundManager : MonoBehaviour
     
         Debug.Log("Updated Area Audio" + currentArea);
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            PlayFootsteps();
-        }
+        // if (Input.GetKeyDown(KeyCode.F))
+        // {
+        //     PlayFootsteps();
+        // }
     }
 
     public void PlayFootsteps()
@@ -93,30 +98,48 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlayAreaSound()
+    public void PlayAreaSound(string newArea)
     {
         
-        Debug.Log("Playing Area Sound:" + currentArea);
-
-        // if (areaInstance.isValid())
-        // {
-            
-        //     Debug.Log("stopped previous area sound");
-        //     areaInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        //     areaInstance.release();
-        // }
-
-        areaInstance = RuntimeManager.CreateInstance(AreaEvent);
-        areaInstance.setParameterByNameWithLabel("Area", currentArea);
-        areaInstance.start();
-
-        if (controller.outOfZone == true)
+        if (currentArea == newArea) 
         {
-            Debug.Log("Stopped Audio - Out Of Zone");
-            areaInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            return;
         }
-        
+
+        currentArea = newArea;
+
+        if (areaInstance.isValid())
+        {
+            areaInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            areaInstance.release();
+        }
+
+        switch (newArea)
+        {
+            case "Forest":
+                areaInstance = RuntimeManager.CreateInstance(ForestEvent);
+                break;
+
+            case "Village":
+                areaInstance = RuntimeManager.CreateInstance(VillageEvent);
+                break;
+
+            case "Song2":
+                areaInstance = RuntimeManager.CreateInstance(Song2Event);
+                break;
+        }
+
+
+        areaInstance.start();
     }
 
+    public void StopMusic()
+    {
+        if (areaInstance.isValid())
+        {
+            areaInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            areaInstance.release();
+        }
+    }
 
 }
