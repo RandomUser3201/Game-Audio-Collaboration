@@ -1,6 +1,14 @@
 # Game-Audio-Collaboration
 Repo used to manage game project for game audio module
 
+# Files:
+
+## Project Documentation - Gantt Chart
+- [GAC Project Documentation A7.pdf](https://github.com/user-attachments/files/19269809/GAC.Project.Documentation.A7.pdf)
+
+## Character List & Voice Lines
+- [character list pdf.pdf](https://github.com/user-attachments/files/19269810/character.list.pdf.pdf)
+
 # Tasks for Project
 
 ## To do:  
