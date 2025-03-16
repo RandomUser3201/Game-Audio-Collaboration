@@ -18,7 +18,8 @@ Repo used to manage game project for game audio module
   - Audio manipulation when player lands after jumping or when player is crouching
   - Character dialogue
   - Sword equip/unequip SFX
-  
+  - Audio Reverb
+
 ## Implemented:  
   - Area Audio Triggers (Box Colliders)
   - Main & Pause Menu GUI
