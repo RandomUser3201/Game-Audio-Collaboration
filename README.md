@@ -1,6 +1,27 @@
 # Game-Audio-Collaboration
 Repo used to manage game project for game audio module
 
+# Tasks for Project
+
+## To do:  
+  - GUI SFX
+  - 3D Audio Emittion from houses (chatter etc.), trees (rustling)
+  - Footsteps in water
+  - Audio manipulation when player lands after jumping or when player is crouching
+  - Character dialogue
+  - Sword equip/unequip SFX
+  
+## Implemented:  
+  - Area Audio Triggers (Box Colliders)
+  - Main & Pause Menu GUI
+  - Working Volume Control (Pause Menu)
+  - 3D Audio (Fire)
+  - Surface-based Footsteps (Dirt, Concrete, Grass)
+  - Epic custom background music 
+
+
+
+
 ## Sounds:
 - Footsteps:
 - Grass: https://freesound.org/people/JanKoehl/sounds/85603/
@@ -24,57 +45,3 @@ Repo used to manage game project for game audio module
 - https://www.zapsplat.com/music/body-impact-could-be-hit-punch-or-kick-8/
 - https://www.zapsplat.com/music/body-impact-could-be-hit-punch-or-kick-4/
 - https://www.zapsplat.com/music/boxer-wearing-boxing-glove-single-punch-hit-face-or-body-crunchy-hit-9/
-
-
-# Tasks for Project
-
-## Audio:  
-  - Main Menu Music
-  - In-game Music
-  - Button Interaction SFX
-  - Pause Menu Music (will be in-game music but edited)
-  - NPC Interaction
-
-  - Animations:
-    - Jump SFX
-    - Walk SFX 
-    - Crouch SFX (Edited Walk SFX)
-    - Run SFX
-  
-  - Environment: 
-    - Birds chirping
-    - Grass interaction
-    - Water
-    - Fire 
-    
-## GUI (Photoshop, Pixlr): 
-  - Main Menu:
-    - Play
-    - Settings
-    - (?)
-    - Quit
-
-  - In-Game:
-    - Health (icon or bar)
-    - Score/Coins icon
-    - Lives icon
-    - Detection icon 
-      - Pause Menu:
-        - Continue
-        - Settings
-          - Audio
-            - Toggle (On/Off)
-            - Main
-            - Music
-            - SFX
-        - (?)
-        - Return To Menu 
-
-## Models, Foilage & Textures (Blender, Maya & Substance Painter):
-  - Ancient Japanese Houses
-  - Trees
-  - Grass
-  - River
-  - Water fountain 
-  - Well 
-  - Sword 
