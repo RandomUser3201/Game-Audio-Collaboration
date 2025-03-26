@@ -7,19 +7,146 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000002AA2F36F528 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000106F708F828 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000106EBFAA0A8, queue head = 000001047BBF2D88, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000106EBFAA0A8
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3218112
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000106EAADF600
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000010477B4EB08, queue head = 000001047BBF2D88, queue count = 0
+[LOG] SystemI::createSound                     :     filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Loop Crickets and Cicadas_PSE_PPV1_A35Dv', format=5, channels=2, frequency=48000, lengthbytes=679040, lengthpcm=2357760, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.190430.
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000010477B4E5F8, queue head = 000001047BBF2D88, queue count = 1
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000106EBFAA0A8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000010477B4EB08
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3218112
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000106EAADF380
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 4000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Loop British Birds_PSE_PPV1_AoGz6', format=5, channels=2, frequency=48000, lengthbytes=482752, lengthpcm=1728512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.083038.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000010477B4EB08
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000010477B4E5F8
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3218112
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000106EAADF740
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 24000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Oneshot Wind Subtle Ambience_PSE_PPV1_XoVH9', format=5, channels=2, frequency=48000, lengthbytes=788672, lengthpcm=2918400, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.398102.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000010477B4E5F8
+[LOG] SoundI::release                          : Loop British Birds_PSE_PPV1_AoGz6 (000001047C0FF3E8)
+[LOG] SoundI::release                          :     Loop British Birds_PSE_PPV1_AoGz6 (00000104797177F8)
+[LOG] SoundI::release                          :     Loop British Birds_PSE_PPV1_AoGz6 (000001066FD784E8)
+[LOG] SoundI::release                          : Oneshot Wind Subtle Ambience_PSE_PPV1_XoVH9 (00000107C43037B8)
+[LOG] SoundI::release                          :     Oneshot Wind Subtle Ambience_PSE_PPV1_XoVH9 (0000010479715298)
+[LOG] SoundI::release                          :     Oneshot Wind Subtle Ambience_PSE_PPV1_XoVH9 (00000106ED58B288)
+[LOG] SoundI::release                          : Loop Crickets and Cicadas_PSE_PPV1_A35Dv (00000107C4303968)
+[LOG] SoundI::release                          :     Loop Crickets and Cicadas_PSE_PPV1_A35Dv (0000010479715438)
+[LOG] SoundI::release                          :     Loop Crickets and Cicadas_PSE_PPV1_A35Dv (00000106ED58B0D8)
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000107C4303458, queue head = 000001047BBF2D88, queue count = 0
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000107C4303458
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000107C4302F48, queue head = 000001047BBF2D88, queue count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3218112
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000107C4303608, queue head = 000001047BBF2D88, queue count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000107C644D340
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Loop Crickets and Cicadas_PSE_PPV1_A35Dv', format=5, channels=2, frequency=48000, lengthbytes=679040, lengthpcm=2357760, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.190430.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000107C4303458
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000107C4302F48
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3218112
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000107C644CE40
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 4000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Loop British Birds_PSE_PPV1_AoGz6', format=5, channels=2, frequency=48000, lengthbytes=482752, lengthpcm=1728512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.083038.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000107C4302F48
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000107C4303608
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3218112
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000107C644CBC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 24000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Oneshot Wind Subtle Ambience_PSE_PPV1_XoVH9', format=5, channels=2, frequency=48000, lengthbytes=788672, lengthpcm=2918400, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.398102.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000107C4303608
+[LOG] SoundI::release                          : Oneshot Wind Subtle Ambience_PSE_PPV1_XoVH9 (0000010477B4E5F8)
+[LOG] SoundI::release                          :     Oneshot Wind Subtle Ambience_PSE_PPV1_XoVH9 (0000010479714F58)
+[LOG] SoundI::release                          :     Oneshot Wind Subtle Ambience_PSE_PPV1_XoVH9 (000001047C0F9AA8)
+[LOG] SoundI::release                          : Loop British Birds_PSE_PPV1_AoGz6 (0000010477B4EB08)
+[LOG] SoundI::release                          :     Loop British Birds_PSE_PPV1_AoGz6 (0000010479717318)
+[LOG] SoundI::release                          :     Loop British Birds_PSE_PPV1_AoGz6 (000001047C0F93E8)
+[LOG] SoundI::release                          : Loop Crickets and Cicadas_PSE_PPV1_A35Dv (00000106EBFAA0A8)
+[LOG] SoundI::release                          :     Loop Crickets and Cicadas_PSE_PPV1_A35Dv (0000010479718B78)
+[LOG] SoundI::release                          :     Loop Crickets and Cicadas_PSE_PPV1_A35Dv (000001047C0F9238)
+[LOG] SoundI::release                          : Oneshot Wind Subtle Ambience_PSE_PPV1_XoVH9 (00000107C4303608)
+[LOG] SoundI::release                          :     Oneshot Wind Subtle Ambience_PSE_PPV1_XoVH9 (0000010479715438)
+[LOG] SoundI::release                          :     Oneshot Wind Subtle Ambience_PSE_PPV1_XoVH9 (000001066FD77408)
+[LOG] SoundI::release                          : Loop British Birds_PSE_PPV1_AoGz6 (00000107C4302F48)
+[LOG] SoundI::release                          :     Loop British Birds_PSE_PPV1_AoGz6 (0000010479717658)
+[LOG] SoundI::release                          :     Loop British Birds_PSE_PPV1_AoGz6 (000001066FD784E8)
+[LOG] SoundI::release                          : Loop Crickets and Cicadas_PSE_PPV1_A35Dv (00000107C4303458)
+[LOG] SoundI::release                          :     Loop Crickets and Cicadas_PSE_PPV1_A35Dv (0000010479715778)
+[LOG] SoundI::release                          :     Loop Crickets and Cicadas_PSE_PPV1_A35Dv (000001066FD76EF8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -27,3 +154,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
