@@ -1,27 +1,511 @@
 [LOG] System::create                           : Header version = 2.02.26. Current version = 2.02.26.
-[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0x0.
+[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20226 (148250), maxchannels=256, flags=0x00020000
-[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
-[LOG] OutputCoreAudio::init                    : Output running 2 channels at 44100Hz sample rate.
-[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 512 samples, Software buffer size: 512 samples, Number of software buffers: 4.
-[LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7fc28b234008 isAsync 0 updatePeriod 0.02
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 000001AD8B7F64B8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] SoundI::release                          :  (0x7fc28f6547c8)
-[LOG] SoundI::release                          :     Oneshot Wood Hit Stick 02_PSE_PPV1_L4yiI (0x7fc28f6f6bd8)
-[LOG] SoundI::release                          :  (0x7fc27a667bd8)
-[LOG] SoundI::release                          :     Oneshot Wood Hit Stick 01_PSE_PPV1_YhwWu (0x7fc27a644478)
-[LOG] SoundI::release                          :  (0x7fc27a69ca78)
-[LOG] SoundI::release                          :     Oneshot Footsteps Male Hard Shoes Gritty_PSE_PPV1_rjz6a (0x7fc27a693648)
-[LOG] SoundI::release                          :  (0x7fc27a614438)
-[LOG] SoundI::release                          :     Oneshot Wood Door Creak_PSE_PPV1_OlUNi (0x7fc27a604088)
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001AD0FB02EE8, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001AD0FB02EE8
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001AD7C14C6E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001AD0FB02EE8
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001AD0FB01748, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001AD0FB01748
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ADEA1E4310
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001AD0FB01748
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001AD0FB03248, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001AD0FB03248
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ADEA1E4810
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001AD0FB03248
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001AD0FB01088, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001AD0FB01088
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ADEA1E4450
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001AD0FB01088
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001AD0FB00B78, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001AD0FB00B78
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ADEA1E4590
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001AD0FB00B78
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001AD0FB00ED8, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001AD0FB00ED8
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ADEA1E46D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001AD0FB00ED8
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001AD0FB03AB8, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001AD0FB03AB8
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ADEA1E4F90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001AD0FB03AB8
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001AD0FB01E08, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001AD0FB01E08
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ADEA1E4950
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001AD0FB01E08
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001AD0FB03E18, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001AD0FB03E18
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ADEA1E4D10
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001AD0FB03E18
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001ADF9A34868, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001ADF9A34868
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ADEA1E4A90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001ADF9A34868
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001ADF9A346B8, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001ADF9A346B8
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ADEA1E4BD0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001ADF9A346B8
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001ADF9A33E48, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001ADF9A33E48
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ADEA1E4E50
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001ADF9A33E48
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001ADF9A35948, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001ADF9A35948
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ADEA1E41D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001ADF9A35948
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001ADF9A35CA8, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001ADF9A35CA8
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ACBCFB9880
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001ADF9A35CA8
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001ADF9A361B8, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001ADF9A361B8
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ACBCFB9100
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001ADF9A361B8
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001ADF9A36518, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001ADF9A36518
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ACBCFB99C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001ADF9A36518
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001ADF9A36878, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001ADF9A36878
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ACBCFB9240
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001ADF9A36878
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001ADF7A751E8, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001ADF7A751E8
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ACBCFB9B00
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001ADF7A751E8
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001ADF7A75C08, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001ADF7A75C08
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ACBCFB9740
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001ADF7A75C08
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001ADF7A773A8, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001ADF7A773A8
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ACBCFB9380
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001ADF7A773A8
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001ADF7A77708, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001ADF7A77708
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ACBCFB9C40
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001ADF7A77708
+[LOG] SystemI::createSound                     : filename = Sv Fmod/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001ADF7A77048, queue head = 000001ACB1829FE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001ADF7A77048
+[LOG] SystemI::createSoundInternal             :     Create name='Sv Fmod/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5041568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001ACBCFB94C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='fire_SFX', format=5, channels=2, frequency=48000, lengthbytes=1764480, lengthpcm=5781533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501187.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001ADF7A77048
+[LOG] SoundI::release                          : fire_SFX (000001ADF7A758A8)
+[LOG] SoundI::release                          :     fire_SFX (000001AC88621B88)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB01598)
+[LOG] SoundI::release                          : fire_SFX (000001ADF7A77C18)
+[LOG] SoundI::release                          :     fire_SFX (000001AC88620668)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB04328)
+[LOG] SoundI::release                          : fire_SFX (000001ADF7A75038)
+[LOG] SoundI::release                          :     fire_SFX (000001AC4301B778)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB02B88)
+[LOG] SoundI::release                          : fire_SFX (000001ADF7A75548)
+[LOG] SoundI::release                          :     fire_SFX (000001AC89274288)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB02828)
+[LOG] SoundI::release                          : fire_SFX (000001ADF7A75DB8)
+[LOG] SoundI::release                          :     fire_SFX (000001AC892740E8)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB018F8)
+[LOG] SoundI::release                          : fire_SFX (000001ADF7A78638)
+[LOG] SoundI::release                          :     fire_SFX (000001AC892752C8)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB04178)
+[LOG] SoundI::release                          : fire_SFX (000001ADF7A74978)
+[LOG] SoundI::release                          :     fire_SFX (000001AC89275608)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB029D8)
+[LOG] SoundI::release                          : fire_SFX (000001ADF7A76CE8)
+[LOG] SoundI::release                          :     fire_SFX (000001AC89273F48)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB02D38)
+[LOG] SoundI::release                          : fire_SFX (000001ADF7A75F68)
+[LOG] SoundI::release                          :     fire_SFX (000001ACB0035A68)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB044D8)
+[LOG] SoundI::release                          : fire_SFX (000001ADF7A77A68)
+[LOG] SoundI::release                          :     fire_SFX (000001ACB0035728)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A35798)
+[LOG] SoundI::release                          : fire_SFX (000001ADF7A78128)
+[LOG] SoundI::release                          :     fire_SFX (000001ACB0035248)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A355E8)
+[LOG] SoundI::release                          : fire_SFX (000001AC891E67F8)
+[LOG] SoundI::release                          :     fire_SFX (000001ACB0035C08)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A35288)
+[LOG] SoundI::release                          : fire_SFX (000001ADDFEDDE38)
+[LOG] SoundI::release                          :     fire_SFX (000001ACB0034A28)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A350D8)
+[LOG] SoundI::release                          : fire_SFX (000001ADDFEDB5B8)
+[LOG] SoundI::release                          :     fire_SFX (000001ACB0034BC8)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A34D78)
+[LOG] SoundI::release                          : fire_SFX (000001ADDFEDBE28)
+[LOG] SoundI::release                          :     fire_SFX (000001ACB0036428)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A34BC8)
+[LOG] SoundI::release                          : fire_SFX (000001ADDFEDB408)
+[LOG] SoundI::release                          :     fire_SFX (000001ACB0035F48)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A34508)
+[LOG] SoundI::release                          : fire_SFX (000001ADDFEDD0B8)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAF8D6C18)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A36D88)
+[LOG] SoundI::release                          : fire_SFX (000001ADDFEDC698)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAF8D68D8)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A36F38)
+[LOG] SoundI::release                          : fire_SFX (000001ADDFEDA178)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAF8D5F18)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A36A28)
+[LOG] SoundI::release                          : fire_SFX (000001ADDFEDC4E8)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAF8D5BD8)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A34A18)
+[LOG] SoundI::release                          : fire_SFX (000001ADDFEDB768)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAF8D6598)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A34358)
+[LOG] SoundI::release                          : fire_SFX (000001ADDFEDD928)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAF8D6738)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A36BD8)
+[LOG] SoundI::release                          : fire_SFX (000001ADF9A36518)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CE348)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A377A8)
+[LOG] SoundI::release                          : fire_SFX (000001ADF9A361B8)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CE828)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A36368)
+[LOG] SoundI::release                          : fire_SFX (000001ADF9A35CA8)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CD7E8)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A36008)
+[LOG] SoundI::release                          : fire_SFX (000001ADF9A35948)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CDCC8)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A33C98)
+[LOG] SoundI::release                          : fire_SFX (000001ADF9A33E48)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CD648)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A35438)
+[LOG] SoundI::release                          : fire_SFX (000001ADF9A346B8)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CD308)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A33FF8)
+[LOG] SoundI::release                          : fire_SFX (000001ADF9A34868)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CDB28)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A341A8)
+[LOG] SoundI::release                          : fire_SFX (000001AD0FB03E18)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5C9068)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB03FC8)
+[LOG] SoundI::release                          : fire_SFX (000001AD0FB01E08)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CCFC8)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB02678)
+[LOG] SoundI::release                          : fire_SFX (000001AD0FB03AB8)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CBC48)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB024C8)
+[LOG] SoundI::release                          : fire_SFX (000001ADF7A77048)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CE9C8)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF7A771F8)
+[LOG] SoundI::release                          : fire_SFX (000001AD0FB00ED8)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5C86A8)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB02318)
+[LOG] SoundI::release                          : fire_SFX (000001ADF7A77708)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CF048)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF7A778B8)
+[LOG] SoundI::release                          : fire_SFX (000001AD0FB00B78)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CAC08)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB00D28)
+[LOG] SoundI::release                          : fire_SFX (000001ADF7A773A8)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CFA08)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF7A76B38)
+[LOG] SoundI::release                          : fire_SFX (000001AD0FB01088)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5C9BC8)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB04838)
+[LOG] SoundI::release                          : fire_SFX (000001ADF7A75C08)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CF868)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF7A76628)
+[LOG] SoundI::release                          : fire_SFX (000001AD0FB03248)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CB768)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB01FB8)
+[LOG] SoundI::release                          : fire_SFX (000001ADF7A751E8)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CF528)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF7A76478)
+[LOG] SoundI::release                          : fire_SFX (000001AD0FB01748)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CC468)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB03908)
+[LOG] SoundI::release                          : fire_SFX (000001ADF9A36878)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CF1E8)
+[LOG] SoundI::release                          :     fire_SFX (000001ADF9A33AE8)
+[LOG] SoundI::release                          : fire_SFX (000001AD0FB02EE8)
+[LOG] SoundI::release                          :     fire_SFX (000001ACAE5CAA68)
+[LOG] SoundI::release                          :     fire_SFX (000001AD0FB01238)
+[LOG] SoundI::release                          :  (000001ACBCFB6CE8)
+[LOG] SoundI::release                          :     Oneshot Wood Hit Stick 02_PSE_PPV1_L4yiI (000001ACAE5CB5C8)
+[LOG] SoundI::release                          :  (000001ACBCFB7CB8)
+[LOG] SoundI::release                          :     Oneshot Wood Hit Stick 01_PSE_PPV1_YhwWu (000001ACAE5CA8C8)
+[LOG] SoundI::release                          :  (000001ACBCFB7588)
+[LOG] SoundI::release                          :     dirt_footstep_1 (000001ACAE5C9888)
+[LOG] SoundI::release                          :  (000001ACBCFB62D8)
+[LOG] SoundI::release                          :     dirt_footstep_2 (000001ACAE5C8B88)
+[LOG] SoundI::release                          :  (000001ACBCFB7418)
+[LOG] SoundI::release                          :     dirt_footstep_3 (000001ACAE5C96E8)
+[LOG] SoundI::release                          :  (000001ACBCFB6168)
+[LOG] SoundI::release                          :     dirt_footstep_4 (000001ACAE5CA728)
+[LOG] SoundI::release                          :  (000001ACBCFB7F98)
+[LOG] SoundI::release                          :     grass_footstep_1 (000001ACAE5CC2C8)
+[LOG] SoundI::release                          :  (000001ACBCFB55E8)
+[LOG] SoundI::release                          :     grass_footstep_2 (000001ACAE5C9208)
+[LOG] SoundI::release                          :  (000001ACBCFB5308)
+[LOG] SoundI::release                          :     grass_footstep_3 (000001ACAE5C8848)
+[LOG] SoundI::release                          :  (000001ACBCFB5028)
+[LOG] SoundI::release                          :     concrete_footstep_1 (000001ACAE5CBDE8)
+[LOG] SoundI::release                          :  (000001ACBCFB5FF8)
+[LOG] SoundI::release                          :     concrete_footstep_2 (000001ACAE5CC948)
+[LOG] SoundI::release                          :  (000001ACBCFB5758)
+[LOG] SoundI::release                          :     concrete_footstep_3 (000001ACAE5CC128)
+[LOG] SoundI::release                          :  (000001ACBCFB76F8)
+[LOG] SoundI::release                          :     Oneshot Footsteps Male Hard Shoes Gritty_PSE_PPV1_rjz6a (000001ACAE5CAF48)
+[LOG] SoundI::release                          :  (000001ACBCFB7E28)
+[LOG] SoundI::release                          :     Oneshot Wood Door Creak_PSE_PPV1_OlUNi (000001ACAE5CA3E8)
+[LOG] SoundI::release                          :  (000001ACB89C1D38)
+[LOG] SoundI::release                          :     652615__krokulator__wood (000001ACAE5CCE28)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -32,3 +516,17 @@
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.

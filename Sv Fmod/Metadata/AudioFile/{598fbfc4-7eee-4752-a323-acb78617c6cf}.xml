@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{598fbfc4-7eee-4752-a323-acb78617c6cf}">
+		<property name="assetPath">
+			<value>652615__krokulator__wood.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.040566893424036278</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{790f8bfe-cb7a-4dac-9b7a-3136b6c9bf9f}</destination>
+		</relationship>
+	</object>
+</objects>
