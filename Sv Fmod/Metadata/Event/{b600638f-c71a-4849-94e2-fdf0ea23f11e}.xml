@@ -5,7 +5,7 @@
 			<value>Boxer</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{e88983a0-770d-4752-854c-f06160040806}</destination>
@@ -91,9 +91,11 @@
 	<object class="MixerBusEffectChain" id="{cbe2705b-95a5-45b9-9a0d-c6aa238454a1}">
 		<relationship name="effects">
 			<destination>{f515135b-461b-4c17-947e-313ce8ab1227}</destination>
+			<destination>{7bbdfae0-c9e6-4e11-a2e2-b80dee84056b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{11fa87a6-f47d-4da0-af38-5fca9b1494e4}" />
 	<object class="MixerBusFader" id="{acca2cc4-0a6a-4c0b-a459-2afc360d2f2c}" />
 	<object class="MixerBusFader" id="{f515135b-461b-4c17-947e-313ce8ab1227}" />
+	<object class="SpatialiserEffect" id="{7bbdfae0-c9e6-4e11-a2e2-b80dee84056b}" />
 </objects>

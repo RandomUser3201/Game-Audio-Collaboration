@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638822334132596722
+  lastModified: 638823183271190237
   FileSizes:
   - Name: Desktop
     Value: 2174
@@ -124,6 +124,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &-3931037242602656116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Training
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Training
+  Guid:
+    Data1: -1093470911
+    Data2: 1257514547
+    Data3: -1084490352
+    Data4: -1908526375
+  Banks:
+  - {fileID: -604615937193264849}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6938
 --- !u!114 &-3567236112178448784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,10 +330,10 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638822341780450546
+  lastModified: 638823186180828506
   FileSizes:
   - Name: Desktop
-    Value: 5065216
+    Value: 5124320
   Exists: 1
 --- !u!114 &-454295827499390360
 MonoBehaviour:
@@ -323,10 +350,10 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638822334132641953
+  lastModified: 638823183271236992
   FileSizes:
   - Name: Desktop
-    Value: 1864
+    Value: 1916
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -360,12 +387,13 @@ MonoBehaviour:
   - {fileID: -3567236112178448784}
   - {fileID: -7172046409185488438}
   - {fileID: 3319362736966958921}
+  - {fileID: -3931037242602656116}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8383574255983134862}
   StringsBanks:
   - {fileID: -454295827499390360}
-  cacheTime: 638822341780450546
+  cacheTime: 638823186180828506
   cacheVersion: 131622
 --- !u!114 &884519591490856401
 MonoBehaviour:
@@ -436,7 +464,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -604615937193264849}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
