@@ -9,6 +9,29 @@ public class NPCDialogue : MonoBehaviour
 {
     private EventInstance dialogueInstance;
 
+    [Header("FMOD Event Paths")]
+    [SerializeField] private string idleEventPath = "event:/NPC/Dialogue/NPC1";
+    [SerializeField] private string interactEventPath = "event:/NPC/InteractionDialogue";
+
+    [Header("Idle Dialogue Settings")]
+    [SerializeField] private int idleDialogueCount = 3;
+    [SerializeField] private float minIdleDelay = 6f;
+    [SerializeField] private float maxIdleDelay = 15f;    
+    
+     private void Start()
+    {
+        StartCoroutine(IdleDialogueRoutine());
+    }
+
+    private IEnumerator IdleDialogueRoutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(minIdleDelay, maxIdleDelay));
+            PlayRandomIdleDialogue();
+        }
+    }
+
     public void PlayDialogue(string eventPath, int dialogueID)
     {
         dialogueInstance = RuntimeManager.CreateInstance(eventPath);
@@ -17,10 +40,16 @@ public class NPCDialogue : MonoBehaviour
         dialogueInstance.release();
     }
 
-    public void PlayRandomDialogue()
+    public void PlayRandomIdleDialogue()
     {
-        string NPCDialogue = "TEST";
-        int randomDialogue = Random.Range(0, 3);
-        PlayDialogue(NPCDialogue, randomDialogue);
+        int randomDialogue = Random.Range(0, idleDialogueCount);
+        PlayDialogue(idleEventPath, randomDialogue);
+    }
+
+    public void PlayInteractionDialogue(int dialogueID)
+    {
+        PlayDialogue(interactEventPath, dialogueID);
     }
 }
+
+

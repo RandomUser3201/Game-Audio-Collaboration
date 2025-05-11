@@ -27,9 +27,5 @@ public class UIBobAnim : MonoBehaviour
             bottomDistance = temp;
             t = 0.0f;
         }
-
-
-
-
     }
 }
