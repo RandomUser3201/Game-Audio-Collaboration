@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
+using UnityEngine.UI;
 
 public class DoorInteraction : MonoBehaviour
 {
     public GameObject KnockPopup;
+    public Image BgImage;
     public string KnockSound = "event:/SFX/Knock";
     private bool _playerInRange = false;
 
@@ -14,8 +16,14 @@ public class DoorInteraction : MonoBehaviour
         if (_playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             RuntimeManager.PlayOneShot(KnockSound, transform.position);
+            BgImage.color = Color.gray;
             Debug.Log("Door Knock");
         }
+        else 
+        {
+            BgImage.color = Color.white;
+        }
+
     }
 
     void OnTriggerEnter(Collider other)
