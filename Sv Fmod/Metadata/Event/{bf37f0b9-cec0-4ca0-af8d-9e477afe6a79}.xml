@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{bf37f0b9-cec0-4ca0-af8d-9e477afe6a79}">
+		<property name="color">
+			<value>Red</value>
+		</property>
 		<property name="name">
-			<value>Warning</value>
+			<value>Warning1</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{c54c31ff-d045-4df4-b8b3-ead97bb05c48}</destination>
@@ -38,6 +41,9 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{3f246412-017d-441b-a50f-98dd91e54162}">
+		<relationship name="modules">
+			<destination>{a637d370-862f-45e6-bca6-b49b2950c471}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{cce970a7-332c-4388-b12b-160016c60a1e}</destination>
 		</relationship>
@@ -56,9 +62,9 @@
 	<object class="EventAutomatableProperties" id="{304ffa36-028c-4957-9dd2-be7cacb09343}" />
 	<object class="MarkerTrack" id="{9890bae2-5566-4baa-9e9a-0cbba0a62642}" />
 	<object class="Timeline" id="{ee491b10-8471-4539-bbc5-ed8b3f22d3dd}">
-		<property name="isProxyEnabled">
-			<value>false</value>
-		</property>
+		<relationship name="modules">
+			<destination>{a637d370-862f-45e6-bca6-b49b2950c471}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{cce970a7-332c-4388-b12b-160016c60a1e}">
 		<relationship name="effectChain">
@@ -69,6 +75,14 @@
 		</relationship>
 		<relationship name="mixer">
 			<destination>{c562c5bd-c20d-41ea-b695-22e8516e3499}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{a637d370-862f-45e6-bca6-b49b2950c471}">
+		<property name="length">
+			<value>2.8792743764172335</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{d6703bf3-5836-4660-9238-fa1c2fa4cc50}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{26e20686-309b-4a7b-b85d-60fe006aab02}">

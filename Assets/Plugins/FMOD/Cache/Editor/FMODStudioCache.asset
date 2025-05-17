@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638824065097880878
+  lastModified: 638830930707371968
   FileSizes:
   - Name: Desktop
     Value: 2174
@@ -70,6 +70,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 19169536
   Exists: 1
+--- !u!114 &-7270760320357991351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/Warning3
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/Warning3
+  Guid:
+    Data1: 61971959
+    Data2: 1118421551
+    Data3: 1384941190
+    Data4: 1549009053
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1671
 --- !u!114 &-7172046409185488438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +312,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 380
+--- !u!114 &-2045045699832380494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/Warning2
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/Warning2
+  Guid:
+    Data1: -1146782806
+    Data2: 1251315165
+    Data3: -1117510240
+    Data4: -506588923
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2623
 --- !u!114 &-1877512098336960722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,10 +428,10 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638824065097920601
+  lastModified: 638830930707410981
   FileSizes:
   - Name: Desktop
-    Value: 2052
+    Value: 2128
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -413,13 +467,15 @@ MonoBehaviour:
   - {fileID: 3319362736966958921}
   - {fileID: -3931037242602656116}
   - {fileID: 1056361042390684916}
-  - {fileID: 6195832667503014036}
+  - {fileID: -2045045699832380494}
+  - {fileID: 7117473886702436672}
+  - {fileID: -7270760320357991351}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8383574255983134862}
   StringsBanks:
   - {fileID: -454295827499390360}
-  cacheTime: 638824075862488828
+  cacheTime: 638830947094886257
   cacheVersion: 131622
 --- !u!114 &884519591490856401
 MonoBehaviour:
@@ -436,10 +492,10 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Dialogue.bank
   Name: Dialogue
   StudioPath: bank:/Dialogue
-  lastModified: 638824075862488828
+  lastModified: 638830947094886257
   FileSizes:
   - Name: Desktop
-    Value: 85472
+    Value: 87168
   Exists: 1
 --- !u!114 &1056361042390684916
 MonoBehaviour:
@@ -578,33 +634,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 30000
---- !u!114 &6195832667503014036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/NPC/Dialogue/Warning
-  m_EditorClassIdentifier: 
-  Path: event:/NPC/Dialogue/Warning
-  Guid:
-    Data1: -1086852935
-    Data2: 1285607104
-    Data3: 1201573295
-    Data4: 2037055098
-  Banks:
-  - {fileID: 884519591490856401}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &6301776829269748063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,3 +688,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
+--- !u!114 &7117473886702436672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/Warning1
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/Warning1
+  Guid:
+    Data1: -1086852935
+    Data2: 1285607104
+    Data3: 1201573295
+    Data4: 2037055098
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2879
