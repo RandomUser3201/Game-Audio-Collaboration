@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638831230784757060
+  lastModified: 638831518086977327
   FileSizes:
   - Name: Desktop
     Value: 2174
@@ -66,10 +66,10 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638822334195875155
+  lastModified: 638831487239410171
   FileSizes:
   - Name: Desktop
-    Value: 19169536
+    Value: 19164320
   Exists: 1
 --- !u!114 &-7270760320357991351
 MonoBehaviour:
@@ -125,6 +125,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2261
+--- !u!114 &-4831976672406631782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/House
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/House
+  Guid:
+    Data1: 1237489143
+    Data2: 1285160339
+    Data3: -757999707
+    Data4: -493910721
+  Banks:
+  - {fileID: -604615937193264849}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 39601
 --- !u!114 &-4235671656885228956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,7 +364,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7593983707985697827}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
@@ -385,10 +412,10 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638831230805752139
+  lastModified: 638831530697853253
   FileSizes:
   - Name: Desktop
-    Value: 5173184
+    Value: 7644704
   Exists: 1
 --- !u!114 &-454295827499390360
 MonoBehaviour:
@@ -405,10 +432,10 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638831230784782063
+  lastModified: 638831518087002501
   FileSizes:
   - Name: Desktop
-    Value: 2130
+    Value: 2286
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -447,12 +474,16 @@ MonoBehaviour:
   - {fileID: 7117473886702436672}
   - {fileID: -7270760320357991351}
   - {fileID: 1191213796890169574}
+  - {fileID: -4831976672406631782}
+  - {fileID: 6677355669444686294}
+  - {fileID: 8746730697069512561}
+  - {fileID: 3864763988901703360}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8383574255983134862}
   StringsBanks:
   - {fileID: -454295827499390360}
-  cacheTime: 638831230805752139
+  cacheTime: 638831530697853253
   cacheVersion: 131622
 --- !u!114 &884519591490856401
 MonoBehaviour:
@@ -523,7 +554,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7593983707985697827}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters:
   - {fileID: -3235178247383190775}
@@ -557,6 +588,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 40
+--- !u!114 &3864763988901703360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Crunch
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Crunch
+  Guid:
+    Data1: 400447921
+    Data2: 1179660715
+    Data3: -227819122
+    Data4: 1650971581
+  Banks:
+  - {fileID: -604615937193264849}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 170
 --- !u!114 &5687383613219155170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -632,7 +690,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7593983707985697827}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
@@ -665,6 +723,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
+--- !u!114 &6677355669444686294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/House2
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/House2
+  Guid:
+    Data1: 1665134950
+    Data2: 1260885190
+    Data3: -526894697
+    Data4: -889492327
+  Banks:
+  - {fileID: -604615937193264849}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 60238
 --- !u!114 &7117473886702436672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,3 +801,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &8746730697069512561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Sleeping
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Sleeping
+  Guid:
+    Data1: 1866097357
+    Data2: 1323744264
+    Data3: 1826310283
+    Data4: 2047932434
+  Banks:
+  - {fileID: -604615937193264849}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 28894
