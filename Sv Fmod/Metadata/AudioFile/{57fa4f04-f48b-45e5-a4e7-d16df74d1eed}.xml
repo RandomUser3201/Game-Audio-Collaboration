@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{57fa4f04-f48b-45e5-a4e7-d16df74d1eed}">
 		<property name="assetPath">
-			<value>From Previous Project/Footsteps/Loop British Birds_PSE_PPV1_AoGz6.wav</value>
+			<value>Other/Loop British Birds_PSE_PPV1_AoGz6.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

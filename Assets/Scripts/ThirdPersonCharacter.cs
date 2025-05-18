@@ -228,11 +228,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			{
 				m_GroundNormal = hitInfo.normal;
 				m_IsGrounded = true;
+				SoundManager.Instance.isGrounded = m_IsGrounded;
 				m_Animator.applyRootMotion = true;
 			}
 			else
 			{
 				m_IsGrounded = false;
+				SoundManager.Instance.isGrounded = m_IsGrounded;
 				m_GroundNormal = Vector3.up;
 				m_Animator.applyRootMotion = false;
 			}

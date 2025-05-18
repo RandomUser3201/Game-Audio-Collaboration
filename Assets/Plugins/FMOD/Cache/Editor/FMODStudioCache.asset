@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638830930707371968
+  lastModified: 638831230784757060
   FileSizes:
   - Name: Desktop
     Value: 2174
@@ -35,8 +35,8 @@ MonoBehaviour:
   Name: Surfaces
   StudioPath: 
   Min: 0
-  Max: 5
-  Default: 0
+  Max: 6
+  Default: 1
   ID:
     data1: 3284524007
     data2: 5225250
@@ -46,6 +46,7 @@ MonoBehaviour:
   - Grass
   - Dirt
   - Concrete
+  - Water
   - Value A
   - Value B
   - Value C
@@ -124,30 +125,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2261
---- !u!114 &-4454705559285392126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/NPC1/Dialogue_ID
-  m_EditorClassIdentifier: 
-  Name: Dialogue_ID
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 3477669668
-    data2: 1824728383
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-4235671656885228956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,10 +385,10 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638823186180828506
+  lastModified: 638831230805752139
   FileSizes:
   - Name: Desktop
-    Value: 5124320
+    Value: 5173184
   Exists: 1
 --- !u!114 &-454295827499390360
 MonoBehaviour:
@@ -428,10 +405,10 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638830930707410981
+  lastModified: 638831230784782063
   FileSizes:
   - Name: Desktop
-    Value: 2128
+    Value: 2130
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -466,16 +443,16 @@ MonoBehaviour:
   - {fileID: -7172046409185488438}
   - {fileID: 3319362736966958921}
   - {fileID: -3931037242602656116}
-  - {fileID: 1056361042390684916}
   - {fileID: -2045045699832380494}
   - {fileID: 7117473886702436672}
   - {fileID: -7270760320357991351}
+  - {fileID: 1191213796890169574}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8383574255983134862}
   StringsBanks:
   - {fileID: -454295827499390360}
-  cacheTime: 638830947094886257
+  cacheTime: 638831230805752139
   cacheVersion: 131622
 --- !u!114 &884519591490856401
 MonoBehaviour:
@@ -492,12 +469,12 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Dialogue.bank
   Name: Dialogue
   StudioPath: bank:/Dialogue
-  lastModified: 638830947094886257
+  lastModified: 638831230784571430
   FileSizes:
   - Name: Desktop
     Value: 87168
   Exists: 1
---- !u!114 &1056361042390684916
+--- !u!114 &1191213796890169574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -507,9 +484,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/NPC/Dialogue/NPC1
+  m_Name: event:/NPC/Dialogue/OldMan
   m_EditorClassIdentifier: 
-  Path: event:/NPC/Dialogue/NPC1
+  Path: event:/NPC/Dialogue/OldMan
   Guid:
     Data1: 668377462
     Data2: 1153525204
@@ -521,7 +498,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -4454705559285392126}
+  - {fileID: 7504184392645669007}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -715,3 +692,27 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2879
+--- !u!114 &7504184392645669007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/OldMan/Dialogue_ID
+  m_EditorClassIdentifier: 
+  Name: Dialogue_ID
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3477669668
+    data2: 1824728383
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1

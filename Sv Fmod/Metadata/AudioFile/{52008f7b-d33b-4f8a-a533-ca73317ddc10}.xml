@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{52008f7b-d33b-4f8a-a533-ca73317ddc10}">
 		<property name="assetPath">
-			<value>482799__craigsmith__r27-23-man-grunts-and-strains (mp3cut.net).wav</value>
+			<value>NPC/482799__craigsmith__r27-23-man-grunts-and-strains (mp3cut.net).wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

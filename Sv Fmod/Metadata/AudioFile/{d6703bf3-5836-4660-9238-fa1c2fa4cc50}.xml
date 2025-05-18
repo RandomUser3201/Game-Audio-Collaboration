@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{d6703bf3-5836-4660-9238-fa1c2fa4cc50}">
 		<property name="assetPath">
-			<value>732542__soundbitersfx__npc-guards-warnings-multiple-character-voices (mp3cut.net).wav</value>
+			<value>NPC/732542__soundbitersfx__npc-guards-warnings-multiple-character-voices (mp3cut.net).wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

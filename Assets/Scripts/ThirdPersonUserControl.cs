@@ -14,7 +14,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         [SerializeField]
         Vector3 m_CamForward;             // The current forward direction of the camera
         private Vector3 m_Move;
-        private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
+        public bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
         
         [SerializeField] private float m_SprintMultiplier = 40f; 
         private float m_MoveSpeedMultiplier = 1f;

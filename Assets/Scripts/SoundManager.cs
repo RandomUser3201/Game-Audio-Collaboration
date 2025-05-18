@@ -8,22 +8,26 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
 
+    [Header("References")]
     [SerializeField] private EventReference FootstepEvent;
     [SerializeField] private EventReference ForestEvent;
     [SerializeField] private EventReference VillageEvent;
     [SerializeField] private EventReference Song2Event;
+    [SerializeField] private GameObject player;
     public EventInstance areaInstance;
 
-
-    [SerializeField] private float rate = 0.45f;
-    [SerializeField] private GameObject player;
-    [SerializeField] private ThirdPersonUserControl controller;
+    [Header("Conditions")]
     public bool isWalking = true;
     public bool isCrouching = false;
-    private float time = 0f;
+    public bool isGrounded = false;
 
+    [Header("Footstep Detection")]
+    [SerializeField] private float time = 0f;
+    [SerializeField] private float rate = 0.45f;
     private string currentSurface; 
     public string currentArea = "";
+    [SerializeField] private float _raycastDistance = 0.5f;
+    
 
     private void Awake()
     {
@@ -47,7 +51,7 @@ public class SoundManager : MonoBehaviour
     void Update()
     {
         // Checks if player is walking
-        if (controller != null && isWalking)
+        if (isWalking)
         {
             time += Time.deltaTime;
             //Debug.Log("Walking: " + isWalking);
@@ -57,7 +61,10 @@ public class SoundManager : MonoBehaviour
             {
                 //Debug.Log("Time: " + time + " Rate: " + rate);
                 SurfaceDetection();
-                PlayFootsteps();
+                if (isGrounded == true)
+                {
+                    PlayFootsteps();
+                }
                 time = 0f;
             }   
         }
@@ -88,11 +95,22 @@ public class SoundManager : MonoBehaviour
     {
         RaycastHit hit;
     
-        if (Physics.Raycast(player.transform.position, Vector3.down, out hit, 0.5f))
+        if (Physics.Raycast(player.transform.position, Vector3.down, out hit, _raycastDistance))
         {
             string tag = hit.collider.gameObject.tag;
             currentSurface = tag;
 
+            // if (currentSurface == "Water")
+            // {
+            //     _raycastDistance = 0.9f;
+            //     Debug.Log($"Water surface detected: {currentSurface} - {_raycastDistance}");
+
+            // }
+            // else
+            // {
+            //     _raycastDistance = 0.5f;
+            //     Debug.Log($"Left Water surface: {currentSurface} - {_raycastDistance}");
+            // }
             Debug.Log("Current surface detected: " + currentSurface);
 
         }
@@ -128,7 +146,6 @@ public class SoundManager : MonoBehaviour
                 areaInstance = RuntimeManager.CreateInstance(Song2Event);
                 break;
         }
-
 
         areaInstance.start();
     }
