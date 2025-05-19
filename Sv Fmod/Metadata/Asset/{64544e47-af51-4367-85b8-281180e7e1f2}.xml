@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{64544e47-af51-4367-85b8-281180e7e1f2}">
+		<property name="assetPath">
+			<value>Bounced Voice/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{790f8bfe-cb7a-4dac-9b7a-3136b6c9bf9f}</destination>
+		</relationship>
+	</object>
+</objects>

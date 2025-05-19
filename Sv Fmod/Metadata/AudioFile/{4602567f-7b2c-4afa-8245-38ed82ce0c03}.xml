@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{4602567f-7b2c-4afa-8245-38ed82ce0c03}">
+		<property name="assetPath">
+			<value>Bounced Foley/Tile Run V1.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>10.445011337868481</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{790f8bfe-cb7a-4dac-9b7a-3136b6c9bf9f}</destination>
+		</relationship>
+	</object>
+</objects>

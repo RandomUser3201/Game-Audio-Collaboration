@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EventFolder" id="{9bbc1036-4092-4b10-9f2e-844530015afb}">
+		<property name="name">
+			<value>17 Samurai Grunt Brown</value>
+		</property>
+		<relationship name="folder">
+			<destination>{c54c31ff-d045-4df4-b8b3-ead97bb05c48}</destination>
+		</relationship>
+	</object>
+</objects>

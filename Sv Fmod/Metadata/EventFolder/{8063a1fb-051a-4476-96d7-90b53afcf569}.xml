@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{8063a1fb-051a-4476-96d7-90b53afcf569}">
+		<property name="name">
+			<value>14 Village Woman Brown</value>
+		</property>
+		<relationship name="folder">
+			<destination>{c54c31ff-d045-4df4-b8b3-ead97bb05c48}</destination>
+		</relationship>
+	</object>
+</objects>

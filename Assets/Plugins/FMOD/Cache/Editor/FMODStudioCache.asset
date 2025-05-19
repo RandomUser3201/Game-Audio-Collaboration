@@ -1,5 +1,85 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8880548077218156204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/7 Samurai Warrior White/7.2 Voice Line
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/7 Samurai Warrior White/7.2 Voice Line
+  Guid:
+    Data1: 1371776799
+    Data2: 1229653307
+    Data3: 224366737
+    Data4: 469068048
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 863812402813549880}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8756837930477922859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/11.2 Voice Line/Dialogue_ID
+  m_EditorClassIdentifier: 
+  Name: Dialogue_ID
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3477669668
+    data2: 1824728383
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-8706995522248025988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/8 Samurai Warrior Black VE/8.2 Voice Line
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/8 Samurai Warrior Black VE/8.2 Voice Line
+  Guid:
+    Data1: -2052909111
+    Data2: 1250695830
+    Data3: 1775894416
+    Data4: 531339666
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 9115981784268850592}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8383574255983134862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,11 +95,67 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638832196416871424
+  lastModified: 638832815686302519
   FileSizes:
   - Name: Desktop
     Value: 2174
   Exists: 1
+--- !u!114 &-8377472390424762487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/6 Samurai Warrior Black ME/6.2 Voice Line
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/6 Samurai Warrior Black ME/6.2 Voice Line
+  Guid:
+    Data1: -967145152
+    Data2: 1270341063
+    Data3: 947280516
+    Data4: 1787166389
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 6321574824700349332}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8288393997417717245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/3 Ninja White/3.3 Voice Line
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/3 Ninja White/3.3 Voice Line
+  Guid:
+    Data1: 1294734737
+    Data2: 1199597203
+    Data3: -1947779179
+    Data4: 682927909
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -78495174509595763}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7621383702302813623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +234,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1671
+--- !u!114 &-7259924054003726335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/16 Sensei Brown/16.2 Voice Line
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/16 Sensei Brown/16.2 Voice Line
+  Guid:
+    Data1: 1550630298
+    Data2: 1138269630
+    Data3: -1820829547
+    Data4: 573399952
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 687159677762935615}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7172046409185488438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +289,54 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2261
+--- !u!114 &-6758407763484071786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/2.3 Voice Line/Dialogue_ID
+  m_EditorClassIdentifier: 
+  Name: Dialogue_ID
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3477669668
+    data2: 1824728383
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-6463140670532930729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/17.2 Voice Line/Dialogue_ID
+  m_EditorClassIdentifier: 
+  Name: Dialogue_ID
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3477669668
+    data2: 1824728383
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-6427199444930663010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,6 +418,62 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &-4130563401396863419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/9 Village Man/9.2 Voice Line
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/9 Village Man/9.2 Voice Line
+  Guid:
+    Data1: 1578766625
+    Data2: 1315409778
+    Data3: -1343143247
+    Data4: 1493082974
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -649847462551727219}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4038350253706976707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/17 Samurai Grunt Brown/17.2 Voice Line
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/17 Samurai Grunt Brown/17.2 Voice Line
+  Guid:
+    Data1: -174770832
+    Data2: 1242098597
+    Data3: -612752978
+    Data4: 1362952232
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6463140670532930729}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3931037242602656116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +501,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6938
+--- !u!114 &-3655512881806994661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/11 Samurai Grunt White/11.2 Voice Line
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/11 Samurai Grunt White/11.2 Voice Line
+  Guid:
+    Data1: 435244612
+    Data2: 1133137173
+    Data3: 961795240
+    Data4: -1233946353
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8756837930477922859}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3567236112178448784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,6 +639,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2284600508262192290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/13.2 Voice Line/Dialogue_ID
+  m_EditorClassIdentifier: 
+  Name: Dialogue_ID
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3477669668
+    data2: 1824728383
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2059347699893868407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,6 +744,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 96000
+--- !u!114 &-1721877355448120869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/5 Sensei White/5.2 Voice Line
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/5 Sensei White/5.2 Voice Line
+  Guid:
+    Data1: -102451044
+    Data2: 1279077140
+    Data3: 2094366082
+    Data4: -1569272138
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1968783187276887002}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1640799389035577522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,6 +799,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 30000
+--- !u!114 &-649847462551727219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/9.2 Voice Line/Dialogue_ID
+  m_EditorClassIdentifier: 
+  Name: Dialogue_ID
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3477669668
+    data2: 1824728383
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-604615937193264849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,10 +858,62 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638832196416906382
+  lastModified: 638832815686352500
   FileSizes:
   - Name: Desktop
-    Value: 2362
+    Value: 3222
+  Exists: 1
+--- !u!114 &-209943194210628875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/1 Villager Woman White/1.1 Voice Line
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/1 Villager Woman White/1.1 Voice Line
+  Guid:
+    Data1: 745153448
+    Data2: 1213903583
+    Data3: 33781665
+    Data4: -1339153412
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3529048413540107318}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-78495174509595763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/3.3 Voice Line/Dialogue_ID
+  m_EditorClassIdentifier: 
+  Name: Dialogue_ID
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3477669668
+    data2: 1824728383
+  Type: 1
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -534,13 +958,74 @@ MonoBehaviour:
   - {fileID: 3864763988901703360}
   - {fileID: -3560991653738532673}
   - {fileID: -6427199444930663010}
+  - {fileID: -3655512881806994661}
+  - {fileID: -7259924054003726335}
+  - {fileID: -209943194210628875}
+  - {fileID: -8880548077218156204}
+  - {fileID: -4130563401396863419}
+  - {fileID: -4038350253706976707}
+  - {fileID: -8288393997417717245}
+  - {fileID: -1721877355448120869}
+  - {fileID: 3442315040136685573}
+  - {fileID: 7380884510372411446}
+  - {fileID: 7946310690573334439}
+  - {fileID: -8377472390424762487}
+  - {fileID: -8706995522248025988}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8383574255983134862}
   StringsBanks:
   - {fileID: -454295827499390360}
-  cacheTime: 638832196418852066
+  cacheTime: 638832815686352500
   cacheVersion: 131622
+--- !u!114 &687159677762935615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/16.2 Voice Line/Dialogue_ID
+  m_EditorClassIdentifier: 
+  Name: Dialogue_ID
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3477669668
+    data2: 1824728383
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &863812402813549880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/7.2 Voice Line/Dialogue_ID
+  m_EditorClassIdentifier: 
+  Name: Dialogue_ID
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3477669668
+    data2: 1824728383
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &884519591490856401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,10 +1041,10 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Dialogue.bank
   Name: Dialogue
   StudioPath: bank:/Dialogue
-  lastModified: 638831230784571430
+  lastModified: 638832815685950018
   FileSizes:
   - Name: Desktop
-    Value: 87168
+    Value: 1620032
   Exists: 1
 --- !u!114 &1191213796890169574
 MonoBehaviour:
@@ -589,6 +1074,54 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1567738189305929672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/14.3 Voice Line/Dialogue_ID
+  m_EditorClassIdentifier: 
+  Name: Dialogue_ID
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3477669668
+    data2: 1824728383
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1968783187276887002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/5.2 Voice Line/Dialogue_ID
+  m_EditorClassIdentifier: 
+  Name: Dialogue_ID
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3477669668
+    data2: 1824728383
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &3209711142373478063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,6 +1177,58 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 40
+--- !u!114 &3442315040136685573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/2 Samurai Warrior/2.3 Voice Line
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/2 Samurai Warrior/2.3 Voice Line
+  Guid:
+    Data1: 1662168564
+    Data2: 1243111869
+    Data3: 377474477
+    Data4: 1908084295
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6758407763484071786}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3529048413540107318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/1.1 Voice Line/Dialogue_ID
+  m_EditorClassIdentifier: 
+  Name: Dialogue_ID
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3477669668
+    data2: 1824728383
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &3864763988901703360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,6 +1337,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 120000
+--- !u!114 &6321574824700349332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/6.2 Voice Line/Dialogue_ID
+  m_EditorClassIdentifier: 
+  Name: Dialogue_ID
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3477669668
+    data2: 1824728383
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &6603704526012162291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,6 +1442,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2879
+--- !u!114 &7380884510372411446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/13 Geish White/13.2 Voice Line
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/13 Geish White/13.2 Voice Line
+  Guid:
+    Data1: 1100430325
+    Data2: 1326565396
+    Data3: -1220601447
+    Data4: 877592348
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2284600508262192290}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7504184392645669007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -857,6 +1494,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7946310690573334439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/14 Village Woman Brown/14.3 Voice Line
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/14 Village Woman Brown/14.3 Voice Line
+  Guid:
+    Data1: -396238023
+    Data2: 1107096706
+    Data3: 1003835315
+    Data4: 208987187
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1567738189305929672}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8746730697069512561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -884,3 +1549,27 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 28894
+--- !u!114 &9115981784268850592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/8.2 Voice Line/Dialogue_ID
+  m_EditorClassIdentifier: 
+  Name: Dialogue_ID
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3477669668
+    data2: 1824728383
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1

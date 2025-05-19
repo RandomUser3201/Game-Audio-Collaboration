@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{12f7af15-9d7c-4225-b094-ad4fa7549ba7}">
+		<property name="assetPath">
+			<value>Bounced Foley/Swoosh V3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.81800453514739224</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{790f8bfe-cb7a-4dac-9b7a-3136b6c9bf9f}</destination>
+		</relationship>
+	</object>
+</objects>
