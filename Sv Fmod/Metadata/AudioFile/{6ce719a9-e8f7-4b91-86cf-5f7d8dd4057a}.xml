@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6ce719a9-e8f7-4b91-86cf-5f7d8dd4057a}">
+		<property name="assetPath">
+			<value>268500-wjtaylor-door-knock_OqDNSMQW.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.28734693877551021</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{790f8bfe-cb7a-4dac-9b7a-3136b6c9bf9f}</destination>
+		</relationship>
+	</object>
+</objects>

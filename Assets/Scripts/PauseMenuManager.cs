@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 using UnityEngine.EventSystems;
 using FMODUnity;
 using FMOD.Studio;
@@ -16,16 +15,15 @@ public class PauseMenuManager : MonoBehaviour
     public GameObject audioU;
     public GameObject audioM;
 
-    public UnityEngine.UI.Slider masterSlider;
-    public UnityEngine.UI.Slider musicSlider;
-    public UnityEngine.UI.Slider sfxSlider;
+    public Slider masterSlider;
+    public Slider musicSlider;
+    public Slider sfxSlider;
 
     private VCA masterVCA;
     private VCA musicVCA;
     private VCA sfxVCA;
 
-    private bool isMuted = false;
-    private float lastVol = 1f;
+    public EventReference ButtonClickSound;
 
     // Start is called before the first frame update
     public void Awake()
@@ -38,7 +36,7 @@ public class PauseMenuManager : MonoBehaviour
         masterSlider.onValueChanged.AddListener(SetMasterVolume);
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
         sfxSlider.onValueChanged.AddListener(SetSFXVolume);
-        
+
         masterVCA = RuntimeManager.GetVCA("vca:/Master");
         musicVCA = RuntimeManager.GetVCA("vca:/Music");
         sfxVCA = RuntimeManager.GetVCA("vca:/SFX");
@@ -63,8 +61,8 @@ public class PauseMenuManager : MonoBehaviour
                 Debug.Log("Pause Menu Pop-Up");
                 menuPanel.SetActive(true);
                 Time.timeScale = 0f;
-                UnityEngine.Cursor.lockState = CursorLockMode.None; 
-                UnityEngine.Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
 
             else
@@ -85,11 +83,11 @@ public class PauseMenuManager : MonoBehaviour
             Time.timeScale = 1;
         }
 
-        if (UnityEngine.Cursor.visible == true)
+        if (Cursor.visible == true)
         {
-            UnityEngine.Cursor.visible = false;
+            Cursor.visible = false;
         }
-        
+
         menuPanel.SetActive(false);
     }
 
@@ -131,21 +129,19 @@ public class PauseMenuManager : MonoBehaviour
 
     public void audioToggle()
     {
-        if (!isMuted)
+        VolumeManager.Instance.ToggleMute();
+        bool muted = VolumeManager.Instance.IsMuted();
+        if (muted)
         {
-            lastVol = masterSlider.value; 
-            SetMasterVolume(0f); 
-            audioM.SetActive(true); 
-            audioU.SetActive(false); 
-            isMuted = true; 
+            audioM.SetActive(true);
+            audioU.SetActive(false);
+            masterSlider.value = 0f;
         }
         else
         {
-            SetMasterVolume(lastVol); 
-            masterSlider.value = lastVol;
             audioM.SetActive(false);
-            audioU.SetActive(true); 
-            isMuted = false;
+            audioU.SetActive(true);
+            masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1f);
         }
     }
 
@@ -169,4 +165,8 @@ public class PauseMenuManager : MonoBehaviour
         PlayerPrefs.SetFloat("SFXVolume", volume);
     }
 
+    public void PlayButtonClickSFX()
+    {
+        RuntimeManager.PlayOneShot(ButtonClickSound);
+    }
 }

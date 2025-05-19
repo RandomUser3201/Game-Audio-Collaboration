@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
 using FMODUnity;
 using FMOD.Studio;
+using Unity.IO.LowLevel.Unsafe;
+using UnityEditor;
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
@@ -15,6 +17,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private EventReference Song2Event;
     [SerializeField] private GameObject player;
     public EventInstance areaInstance;
+    private CropDetection _cropDetection;
 
     [Header("Conditions")]
     public bool isWalking = true;
@@ -24,10 +27,10 @@ public class SoundManager : MonoBehaviour
     [Header("Footstep Detection")]
     [SerializeField] private float time = 0f;
     [SerializeField] private float rate = 0.45f;
-    private string currentSurface; 
+    private string currentSurface;
     public string currentArea = "";
     [SerializeField] private float _raycastDistance = 0.5f;
-    
+
 
     private void Awake()
     {
@@ -39,6 +42,8 @@ public class SoundManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        _cropDetection = GameObject.FindWithTag("Bamboo").GetComponent<CropDetection>();
     }
 
     // Start is called before the first frame update
@@ -66,9 +71,9 @@ public class SoundManager : MonoBehaviour
                     PlayFootsteps();
                 }
                 time = 0f;
-            }   
+            }
         }
-    
+
         Debug.Log("Updated Area Audio" + currentArea);
 
         // if (Input.GetKeyDown(KeyCode.F))
@@ -94,32 +99,43 @@ public class SoundManager : MonoBehaviour
     private void SurfaceDetection()
     {
         RaycastHit hit;
-    
+        // if (_cropDetection.inCrop == false)
+        // {
         if (Physics.Raycast(player.transform.position, Vector3.down, out hit, _raycastDistance))
         {
             string tag = hit.collider.gameObject.tag;
             currentSurface = tag;
-
-            // if (currentSurface == "Water")
-            // {
-            //     _raycastDistance = 0.9f;
-            //     Debug.Log($"Water surface detected: {currentSurface} - {_raycastDistance}");
-
-            // }
-            // else
-            // {
-            //     _raycastDistance = 0.5f;
-            //     Debug.Log($"Left Water surface: {currentSurface} - {_raycastDistance}");
-            // }
             Debug.Log("Current surface detected: " + currentSurface);
-
         }
+#region --------- TESTING ----------
+        //}
+        // else if (_cropDetection.inCrop == true)
+        // {
+        //     currentSurface = "Bamboo";
+        // }
+
+        // else if (_cropDetection.inCrop)
+        // {
+        //     Debug.Log("Else if crop");
+        //     RaycastHit hit2;
+        //     if (Physics.Raycast(player.transform.position, Vector3.forward, out hit2, _raycastDistance))
+        //     {
+        //         Debug.Log("Current Surface Bamboo");
+        //         currentSurface = "Bamboo";
+        //     }
+        //     else
+        //     {
+        //         Debug.Log("Set current surface to tag");
+        //         currentSurface = tag;
+        //     }
+        // }
+        #endregion
     }
 
     public void PlayAreaSound(string newArea)
     {
-        
-        if (currentArea == newArea) 
+
+        if (currentArea == newArea)
         {
             return;
         }
