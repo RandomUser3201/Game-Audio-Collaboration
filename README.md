@@ -1,37 +1,98 @@
 # Game-Audio-Collaboration
-Repo used to manage game project for game audio module
+For this project the Samurai Village Unity project was used.
 
-# Files:
+# Project Overview:
+This project focused on adding high-quality sound design to the Samurai Village Unity game using FMOD and other audio tools. The goal was to create an immersive audio experience by implementing key features such as footsteps, NPC dialogue, area-based sound triggers, interactable sound effects, and volume controls through the user interface.
 
-## Project Documentation - Gantt Chart
-- [GAC Project Documentation A7.pdf](https://github.com/user-attachments/files/19269809/GAC.Project.Documentation.A7.pdf)
+While the team successfully completed these core elements, attempts to integrate advanced audio features like reverb, occlusion effects, and a wider variety of sound effects—including specific crop sounds and complex NPC dialogue triggers—were limited. 
+
+These challenges were mainly due to time constraints and underestimating the learning curve associated with new software and tools. Despite this, the project achieved a solid foundation for dynamic and interactive audio within the game environment.
 
 ## Character List & Voice Lines
-- [character list pdf.pdf](https://github.com/user-attachments/files/19269810/character.list.pdf.pdf)
+- Character List Table:
+![Image](https://github.com/user-attachments/assets/dc7d1151-c596-4f9f-bfed-00de7e75f2ce)
 
-# Tasks for Project
+- PDF:
+- [Character List.pdf](https://github.com/user-attachments/files/19269810/character.list.pdf.pdf)
 
-## To do:  
-  - GUI SFX
-  - 3D Audio Emittion from houses (chatter etc.), trees (rustling)
-  - Footsteps in water
-  - Audio manipulation when player lands after jumping or when player is crouching
-  - Character dialogue
-  - Sword equip/unequip SFX
-  - Audio Reverb
+## Gantt Chart 
+The following image is a visualization of the project timeline. For this project, a mix of the Waterfall and Agile methodology was used for project management.
 
-## Implemented:  
-  - Area Audio Triggers (Box Colliders)
-  - Main & Pause Menu GUI
-  - Working Volume Control (Pause Menu)
-  - 3D Audio (Fire)
-  - Surface-based Footsteps (Dirt, Concrete, Grass)
-  - Epic custom background music 
+![Image](https://github.com/user-attachments/assets/ab0148cb-3ee8-459a-a87c-f87099d4f295)
 
+## Task Overview
+Effort was made to ensure each task was distributed equally among all members
+
+![Image](https://github.com/user-attachments/assets/aaf38eb4-cc03-4807-99a7-a43f52ff5579)
+
+From the tasks displayed above, the following were not implemented:  
+- Combat Sound
+- Reverb & Occulision Effects
+- Day/Night Cycle
+- Lip Syncing
 
 
-##
-### References:
+
+# Monthly Log
+
+## February
+In February the project was set up on GitHub and FMOD was updated to a newer version. Work began on adding footstep sounds, starting with solving a bug where audio wasn't playing. Grass footsteps were implemented successfully. A system was then added to switch between different surface sounds like grass and dirt. 
+Objects in Unity were given tags, and if a tag matched an FMOD parameter label, the correct sound would play. This allowed the footstep audio to respond to different environments. 
+
+## March
+In March new footstep sounds were added for rock and concrete surfaces, along with 3D sound effects for fire particles. The main menu was set up including layout, working buttons, and scene transitions. Audio settings were added to the menu. Work began on area-based audio triggers and the pause menu. The pause menu toggle key was not functioning correctly and the area audio would not stop when switching zones, which was noted for later fixes. The FMOD and Unity versions were changed for better compatibility, and a new FMOD project from Luke was integrated successfully. 
+
+Area sound triggers began working with box collisions, though audio stopped abruptly so fade-in and fade-out functionality was planned. Volume control using VCAs was added with working sliders in the pause menu. Player preferences were saved and mute toggle was implemented. Later, area triggers were improved by merging Luke's FMOD project with the current one and switching to using FMOD event emitters instead of custom logic.
+
+## April
+Not much work was done in April. Some early progress was made toward adding dialogue using FMOD. A basic layout for the dialogue system was created in the FMOD project, and a test script was set up to try out how NPCs could play voice lines either randomly or when interacted with. The system was not fully finished or added into the game yet. Overall, development slowed down this month due to limited time spent on the project.
+
+## May
+In May, significant progress was made on adding and refining sound design throughout the project. Sound effects for NPC actions like training and hitting the boxing pole were implemented using box colliders to trigger the audio. Idle NPC dialogues were introduced, along with interactable doors that display a popup and play knock sounds when the player is nearby. A set of bridge guard warnings was added, featuring multiple voice lines that play based on the player’s distance, with timers to prevent audio overlap or crashes. 
+
+Footstep sounds were expanded to include water surfaces, and footsteps now properly stop while jumping. The village audio was enhanced with additional 3D ambient sounds, carefully organized to avoid overlapping as the player moves through the environment. UI sound effects were added and volume settings are now saved using PlayerPrefs. 
+
+Custom voice lines and foley recordings were integrated into FMOD, with several already implemented in Unity. Finally, walking sounds for wood and rock surfaces were added along with a dialogue volume slider in the UI, improving player control over audio experience.
+
+## Individual Contributions
+
+## Zeeshan
+[Unity]
+- Designed All Graphical User Interface
+- Implemented Sound Zone
+- 3D Audio (Houses, Fire, NPC etc.) 
+- Dynamic Footsteps (Surfaces)  
+- NPC Dialogue & Sound Effects
+- User Interface Sound Effects
+- Volume Control (Settings: Pause & Main Menu)
+- Interactable Environment (Gong, Doors)
+- Area Sound Triggers
+- Object Step Sound Effect (Wood, Rocks)
+
+[FMOD]
+- Organised Folders 
+- Managed Parameters
+- Modified Sounds For Realism (Pitch & 3D Spatializer Settings)
+- Set-up Banks For Volume Control
+
+## Luke Leach
+[FMOD]
+
+[WWise]
+
+## Luke Cannon
+[FMOD]
+
+[WWise]
+
+
+## Lewis French
+[Absent]
+
+
+
+
+## References:
 - Footsteps:  
 JanKoehel (2009) walk-grass [online] Available at: https://freesound.org/people/JanKoehl/sounds/85603/ [Accessed 15 May 2025]  
 DasDeer (2012) Sand walk [online] Available at: https://freesound.org/people/DasDeer/sounds/161815/ [Accessed 15 May 2025]  
