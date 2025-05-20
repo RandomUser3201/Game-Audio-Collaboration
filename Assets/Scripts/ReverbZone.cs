@@ -6,8 +6,7 @@ using FMODUnity;
 
 public class ReverbZone : MonoBehaviour
 {
-    
-    public string snapshotPath;
+    public EventReference snapshotPath;
 
     private EventInstance snapshotInstance;
 

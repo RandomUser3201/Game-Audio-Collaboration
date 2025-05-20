@@ -13,13 +13,14 @@ public class DoorInteraction : MonoBehaviour
 
     void Update()
     {
+        // If player is in range and presses 'E', play knock sound
         if (_playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             RuntimeManager.PlayOneShot(KnockSound, transform.position);
             BgImage.color = Color.gray;
             Debug.Log("Door Knock");
         }
-        else 
+        else
         {
             BgImage.color = Color.white;
         }

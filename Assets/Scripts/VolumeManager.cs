@@ -5,7 +5,7 @@ using FMODUnity;
 using FMOD.Studio;
 using UnityEngine.Rendering;
 public class VolumeManager : MonoBehaviour
-{
+{ 
     public static VolumeManager Instance;
 
     private VCA masterVCA;
@@ -28,11 +28,13 @@ public class VolumeManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
+        // Get FMOD VCAs by path
         masterVCA = RuntimeManager.GetVCA("vca:/Master");
         musicVCA = RuntimeManager.GetVCA("vca:/Music");
         sfxVCA = RuntimeManager.GetVCA("vca:/SFX");
         dialogueVCA = RuntimeManager.GetVCA("vca:/Dialogue");
 
+        // Load saved volume settings
         float savedMaster = PlayerPrefs.GetFloat("MasterVolume", 1f);
         float savedMusic = PlayerPrefs.GetFloat("MusicVolume", 1f);
         float savedSFX = PlayerPrefs.GetFloat("SFXVolume", 1f);
@@ -88,6 +90,7 @@ public class VolumeManager : MonoBehaviour
     {
         if (!isMuted)
         {
+            // Store previous volume before muting
             masterVCA.getVolume(out previousMasterVolume);
             masterVCA.setVolume(0f);
             isMuted = true;
@@ -97,7 +100,8 @@ public class VolumeManager : MonoBehaviour
             masterVCA.setVolume(previousMasterVolume);
             isMuted = false;
         }
-
+        
+        // Save mute state and last used volume
         PlayerPrefs.SetInt("IsMuted", isMuted ? 1 : 0);
         PlayerPrefs.SetFloat("MasterVolume", previousMasterVolume);
     }

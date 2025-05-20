@@ -28,15 +28,13 @@ public class MainMenuManager : MonoBehaviour
     private VCA sfxVCA;
     private VCA dialogueVCA;
 
-
-
-    // Start is called before the first frame update
     public void Awake()
     {
         optionsPanel.SetActive(false);
         audioPanel.SetActive(false);
         audioM.SetActive(false);
 
+        // Assign FMOD VCAs by path
         masterVCA = RuntimeManager.GetVCA("vca:/Master");
         musicVCA = RuntimeManager.GetVCA("vca:/Music");
         sfxVCA = RuntimeManager.GetVCA("vca:/SFX");
@@ -46,12 +44,13 @@ public class MainMenuManager : MonoBehaviour
 
     void Start()
     {
+        // Load saved volume levels from PlayerPrefs
         masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1f);
         musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1f);
         sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume", 1f);
         dialogueSlider.value = PlayerPrefs.GetFloat("DialogueVolume", 1f);
 
-
+         // Register listeners that call the VolumeManager when slider values change
         masterSlider.onValueChanged.AddListener((v) => VolumeManager.Instance.SetMasterVolume(v));
         musicSlider.onValueChanged.AddListener((v) => VolumeManager.Instance.SetMusicVolume(v));
         sfxSlider.onValueChanged.AddListener((v) => VolumeManager.Instance.SetSFXVolume(v));
@@ -104,6 +103,8 @@ public class MainMenuManager : MonoBehaviour
 
     public void AudioToggle()
     {
+        // Toggles mute state and updates mute/unmute icons
+
         VolumeManager.Instance.ToggleMute();
 
         bool isMuted = VolumeManager.Instance.IsMuted();

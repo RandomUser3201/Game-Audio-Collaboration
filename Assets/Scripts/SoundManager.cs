@@ -59,12 +59,10 @@ public class SoundManager : MonoBehaviour
         if (isWalking)
         {
             time += Time.deltaTime;
-            //Debug.Log("Walking: " + isWalking);
 
             // Rate, stops the footstep sounds from playing all at once. Controls time.
             if (time >= rate)
             {
-                //Debug.Log("Time: " + time + " Rate: " + rate);
                 SurfaceDetection();
                 if (isGrounded == true)
                 {
@@ -76,65 +74,34 @@ public class SoundManager : MonoBehaviour
 
         Debug.Log("Updated Area Audio" + currentArea);
 
-        // if (Input.GetKeyDown(KeyCode.F))
-        // {
-        //     PlayFootsteps();
-        // }
     }
 
     public void PlayFootsteps()
     {
-        //Debug.Log("Footstep sound played on: " + currentSurface);
-
         EventInstance footstepInstance = RuntimeManager.CreateInstance(FootstepEvent);
         footstepInstance.setParameterByNameWithLabel("Surfaces", currentSurface);
         footstepInstance.start();
         footstepInstance.release();
-
-        // - Old code - quick testing --
-        //RuntimeManager.PlayOneShotAttached(FootstepEvent, player);
-        // RuntimeManager.PlayOneShot("event:/Footsteps");
     }
 
     private void SurfaceDetection()
     {
+        // Raycast to detect the surface tag beneath the player
         RaycastHit hit;
-        // if (_cropDetection.inCrop == false)
-        // {
+    
         if (Physics.Raycast(player.transform.position, Vector3.down, out hit, _raycastDistance))
         {
             string tag = hit.collider.gameObject.tag;
             currentSurface = tag;
             Debug.Log("Current surface detected: " + currentSurface);
         }
-#region --------- TESTING ----------
-        //}
-        // else if (_cropDetection.inCrop == true)
-        // {
-        //     currentSurface = "Bamboo";
-        // }
-
-        // else if (_cropDetection.inCrop)
-        // {
-        //     Debug.Log("Else if crop");
-        //     RaycastHit hit2;
-        //     if (Physics.Raycast(player.transform.position, Vector3.forward, out hit2, _raycastDistance))
-        //     {
-        //         Debug.Log("Current Surface Bamboo");
-        //         currentSurface = "Bamboo";
-        //     }
-        //     else
-        //     {
-        //         Debug.Log("Set current surface to tag");
-        //         currentSurface = tag;
-        //     }
-        // }
-        #endregion
     }
 
     public void PlayAreaSound(string newArea)
     {
+        // Starts ambient area music based on the player's current area
 
+        // Skip if already in area
         if (currentArea == newArea)
         {
             return;
@@ -142,12 +109,14 @@ public class SoundManager : MonoBehaviour
 
         currentArea = newArea;
 
+        // Stop and release current area music if playing
         if (areaInstance.isValid())
         {
             areaInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             areaInstance.release();
         }
 
+        // Choose new area audio based on string input
         switch (newArea)
         {
             case "Forest":
@@ -166,6 +135,7 @@ public class SoundManager : MonoBehaviour
         areaInstance.start();
     }
 
+    // Force-stop the current area music
     public void StopMusic()
     {
         if (areaInstance.isValid())

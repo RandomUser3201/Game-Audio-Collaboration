@@ -9,9 +9,9 @@ public class GuardWarning : MonoBehaviour
     public Transform Player;
 
     [Header("Distances")]
-    public float WarningDistance1 = 20f;
-    public float WarningDistance2 = 10f;
-    public float WarningDistance3 = 5f;
+    public float WarningDistance1 = 20f; // Far
+    public float WarningDistance2 = 10f; // Mid
+    public float WarningDistance3 = 5f; // Close
 
     [Header("Events")]
     public EventReference WarningEvent1;
@@ -27,16 +27,11 @@ public class GuardWarning : MonoBehaviour
     private float _timer2 = 0f;
     private float _timer3 = 0f;
 
-
-    void Awake()
-    {
-
-    }
-
     void Update()
     {
         float distance = Vector3.Distance(Player.position, transform.position);
 
+        // --- Decrease cooldown timers over time ---
         if (_timer1 > 0)
         {
             _timer1 -= Time.deltaTime;
@@ -50,6 +45,7 @@ public class GuardWarning : MonoBehaviour
             _timer3 -= Time.deltaTime;
         }
 
+        // --- Check if player is in range for warning, and cooldown has passed --- 
         if (distance <= WarningDistance1 && distance >= WarningDistance2 && _timer1 <= 0f)
         {
             RuntimeManager.PlayOneShot(WarningEvent1, transform.position);

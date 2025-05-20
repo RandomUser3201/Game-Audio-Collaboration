@@ -20,6 +20,7 @@ public class NPCDialogue : MonoBehaviour
 
     private void Start()
     {
+        // Begin coroutine to periodically play idle voice lines
         StartCoroutine(IdleDialogueRoutine());
     }
 
@@ -45,12 +46,14 @@ public class NPCDialogue : MonoBehaviour
 
     public void PlayRandomIdleDialogue()
     {
+        // Chooses a random idle dialogue ID and plays it
         int randomDialogue = Random.Range(0, idleDialogueCount);
         PlayDialogue(idleEvent, randomDialogue);
     }
 
     public void PlayInteractionDialogue(int dialogueID)
     {
+        // Plays a specific dialogue line for player interaction
         PlayDialogue(interactEvent, dialogueID);
     }
 }

@@ -31,26 +31,31 @@ public class PauseMenuManager : MonoBehaviour
     // Start is called before the first frame update
     public void Awake()
     {
+        // Disables all panels initially
         menuPanel.SetActive(false);
         optionsPanel.SetActive(false);
         audioPanel.SetActive(false);
         audioM.SetActive(false);
 
+        // Register slider listeners to update volumes
         masterSlider.onValueChanged.AddListener(SetMasterVolume);
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
         sfxSlider.onValueChanged.AddListener(SetSFXVolume);
         dialogueSlider.onValueChanged.AddListener(SetDialogueVolume);
         
+        // Assign FMOD VCAs
         masterVCA = RuntimeManager.GetVCA("vca:/Master");
         musicVCA = RuntimeManager.GetVCA("vca:/Music");
         sfxVCA = RuntimeManager.GetVCA("vca:/SFX");
         dialogueVCA = RuntimeManager.GetVCA("vca:/Dialogue");
 
+        // Load previously saved volume levels
         masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1f);
         musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1f);
         sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume", 1f);
         dialogueSlider.value = PlayerPrefs.GetFloat("DialogueVolume", 1f);
 
+        // Apply loaded volume values
         SetMasterVolume(masterSlider.value);
         SetMusicVolume(musicSlider.value);
         SetSFXVolume(sfxSlider.value);
@@ -59,9 +64,9 @@ public class PauseMenuManager : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            Debug.Log("T pressed");
+            Debug.Log("F pressed");
 
             if (!menuPanel.activeSelf)
             {
@@ -85,11 +90,14 @@ public class PauseMenuManager : MonoBehaviour
     public void ResumeButtonF()
     {
         Debug.Log("Resume");
+
+        // Resume time if paused
         if (Time.timeScale == 0)
         {
             Time.timeScale = 1;
         }
 
+        // Hides cursor
         if (Cursor.visible == true)
         {
             Cursor.visible = false;
