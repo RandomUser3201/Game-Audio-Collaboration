@@ -57,6 +57,9 @@ Custom voice lines and foley recordings were integrated into FMOD, with several 
 ## Individual Contributions
 
 ## Zeeshan
+- Version Control (GitHub)
+- Recording Voice Lines / Sound Effects (Foley Room) 
+
 [Unity]
 - Designed All Graphical User Interface
 - Implemented Sound Zone
@@ -76,9 +79,25 @@ Custom voice lines and foley recordings were integrated into FMOD, with several 
 - Set-up Banks For Volume Control
 
 ## Luke Leach
-[FMOD]
+[Pro Tools]
+- Review and edit dialogue
+- Find voice actors for studio sessions
+- Book and organise studio time
+- Edit session for dialogue
+- Process and improve characters voices
+- Export out all dialogue
+- Organise into folders
+- Review and create list of foley needed
+- Book and manage studio time
+- Edit session for foley
+- Process sounds for clean short takes with variation in sound
+- Export out foley clips
+- Organise into folders
 
-[WWise]
+[FMOD]
+- Import dialogue and foley into FMOD
+- Organise into folders for each character
+- Import foley into FMOD to replace temporary sounds
 
 ## Luke Cannon
 [FMOD]
