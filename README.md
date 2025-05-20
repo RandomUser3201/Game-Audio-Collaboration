@@ -100,9 +100,11 @@ Custom voice lines and foley recordings were integrated into FMOD, with several 
 - Import foley into FMOD to replace temporary sounds
 
 ## Luke Cannon
-[FMOD]
+- Ambience for village and forest
+- Player sounds
+- UI sounds and npc pop ups
+- Custom Game Music (3 Songs)
 
-[WWise]
 
 
 ## Lewis French
