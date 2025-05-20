@@ -80,6 +80,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8419493995943841977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Gravel
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Gravel
+  Guid:
+    Data1: 183476169
+    Data2: 1310157268
+    Data3: -1202451051
+    Data4: -1707245186
+  Banks:
+  - {fileID: -604615937193264849}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 201
 --- !u!114 &-8383574255983134862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,10 +122,10 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638832815686302519
+  lastModified: 638832988418153864
   FileSizes:
   - Name: Desktop
-    Value: 2174
+    Value: 1808
   Exists: 1
 --- !u!114 &-8377472390424762487
 MonoBehaviour:
@@ -202,7 +229,7 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638831487239410171
+  lastModified: 638832991346998638
   FileSizes:
   - Name: Desktop
     Value: 19164320
@@ -364,6 +391,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 216
+--- !u!114 &-5156066235235293044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Dialogue/1 Villager Woman White/1.3 Voice Line
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Dialogue/1 Villager Woman White/1.3 Voice Line
+  Guid:
+    Data1: 745153448
+    Data2: 1213903583
+    Data3: 33781665
+    Data4: -1339153412
+  Banks:
+  - {fileID: 884519591490856401}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2941975572798776738}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4831976672406631782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,6 +446,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 39601
+--- !u!114 &-4479788730280862799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Bell
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Bell
+  Guid:
+    Data1: -995380014
+    Data2: 1089634816
+    Data3: 1501846448
+    Data4: -408506316
+  Banks:
+  - {fileID: -604615937193264849}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1800
 --- !u!114 &-4235671656885228956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,6 +721,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2941975572798776738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/1.3 Voice Line/Dialogue_ID
+  m_EditorClassIdentifier: 
+  Name: Dialogue_ID
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3477669668
+    data2: 1824728383
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2284600508262192290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -838,10 +944,10 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638832196418852066
+  lastModified: 638832989581930985
   FileSizes:
   - Name: Desktop
-    Value: 7656672
+    Value: 7665536
   Exists: 1
 --- !u!114 &-454295827499390360
 MonoBehaviour:
@@ -858,39 +964,11 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638832815686352500
+  lastModified: 638832988418200843
   FileSizes:
   - Name: Desktop
-    Value: 3222
+    Value: 3232
   Exists: 1
---- !u!114 &-209943194210628875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/NPC/Dialogue/1 Villager Woman White/1.1 Voice Line
-  m_EditorClassIdentifier: 
-  Path: event:/NPC/Dialogue/1 Villager Woman White/1.1 Voice Line
-  Guid:
-    Data1: 745153448
-    Data2: 1213903583
-    Data3: 33781665
-    Data4: -1339153412
-  Banks:
-  - {fileID: 884519591490856401}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 3529048413540107318}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-78495174509595763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -940,7 +1018,6 @@ MonoBehaviour:
   - {fileID: -3050436741242837955}
   - {fileID: -4235671656885228956}
   - {fileID: -2059347699893868407}
-  - {fileID: 5687383613219155170}
   - {fileID: 3209711142373478063}
   - {fileID: 6301776829269748063}
   - {fileID: -1877512098336960722}
@@ -955,12 +1032,10 @@ MonoBehaviour:
   - {fileID: -4831976672406631782}
   - {fileID: 6677355669444686294}
   - {fileID: 8746730697069512561}
-  - {fileID: 3864763988901703360}
   - {fileID: -3560991653738532673}
   - {fileID: -6427199444930663010}
   - {fileID: -3655512881806994661}
   - {fileID: -7259924054003726335}
-  - {fileID: -209943194210628875}
   - {fileID: -8880548077218156204}
   - {fileID: -4130563401396863419}
   - {fileID: -4038350253706976707}
@@ -971,12 +1046,16 @@ MonoBehaviour:
   - {fileID: 7946310690573334439}
   - {fileID: -8377472390424762487}
   - {fileID: -8706995522248025988}
+  - {fileID: -4479788730280862799}
+  - {fileID: -5156066235235293044}
+  - {fileID: -8419493995943841977}
+  - {fileID: 8884917411305038133}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8383574255983134862}
   StringsBanks:
   - {fileID: -454295827499390360}
-  cacheTime: 638832815686352500
+  cacheTime: 638832991346998638
   cacheVersion: 131622
 --- !u!114 &687159677762935615
 MonoBehaviour:
@@ -1041,7 +1120,7 @@ MonoBehaviour:
   Path: Sv Fmod/Build/Desktop/Dialogue.bank
   Name: Dialogue
   StudioPath: bank:/Dialogue
-  lastModified: 638832815685950018
+  lastModified: 638832958657373372
   FileSizes:
   - Name: Desktop
     Value: 1620032
@@ -1205,84 +1284,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &3529048413540107318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/1.1 Voice Line/Dialogue_ID
-  m_EditorClassIdentifier: 
-  Name: Dialogue_ID
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 3477669668
-    data2: 1824728383
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &3864763988901703360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character/Crunch
-  m_EditorClassIdentifier: 
-  Path: event:/Character/Crunch
-  Guid:
-    Data1: 400447921
-    Data2: 1179660715
-    Data3: -227819122
-    Data4: 1650971581
-  Banks:
-  - {fileID: -604615937193264849}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 170
---- !u!114 &5687383613219155170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI/ok
-  m_EditorClassIdentifier: 
-  Path: event:/UI/ok
-  Guid:
-    Data1: -995380014
-    Data2: 1089634816
-    Data3: 1501846448
-    Data4: -408506316
-  Banks:
-  - {fileID: -604615937193264849}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1800
 --- !u!114 &5952358632178614943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1549,6 +1550,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 28894
+--- !u!114 &8884917411305038133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Wood
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Wood
+  Guid:
+    Data1: 2057632485
+    Data2: 1236709235
+    Data3: 984917909
+    Data4: -1674796832
+  Banks:
+  - {fileID: -604615937193264849}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1493
 --- !u!114 &9115981784268850592
 MonoBehaviour:
   m_ObjectHideFlags: 0

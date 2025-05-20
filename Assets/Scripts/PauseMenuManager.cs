@@ -18,10 +18,13 @@ public class PauseMenuManager : MonoBehaviour
     public Slider masterSlider;
     public Slider musicSlider;
     public Slider sfxSlider;
+    public Slider dialogueSlider;
 
     private VCA masterVCA;
     private VCA musicVCA;
     private VCA sfxVCA;
+    private VCA dialogueVCA;
+
 
     public EventReference ButtonClickSound;
 
@@ -36,18 +39,22 @@ public class PauseMenuManager : MonoBehaviour
         masterSlider.onValueChanged.AddListener(SetMasterVolume);
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
         sfxSlider.onValueChanged.AddListener(SetSFXVolume);
-
+        dialogueSlider.onValueChanged.AddListener(SetDialogueVolume);
+        
         masterVCA = RuntimeManager.GetVCA("vca:/Master");
         musicVCA = RuntimeManager.GetVCA("vca:/Music");
         sfxVCA = RuntimeManager.GetVCA("vca:/SFX");
+        dialogueVCA = RuntimeManager.GetVCA("vca:/Dialogue");
 
         masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1f);
         musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1f);
         sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume", 1f);
+        dialogueSlider.value = PlayerPrefs.GetFloat("DialogueVolume", 1f);
 
         SetMasterVolume(masterSlider.value);
         SetMusicVolume(musicSlider.value);
         SetSFXVolume(sfxSlider.value);
+        SetDialogueVolume(dialogueSlider.value);
     }
 
     public void Update()
@@ -163,6 +170,12 @@ public class PauseMenuManager : MonoBehaviour
     {
         sfxVCA.setVolume(volume);
         PlayerPrefs.SetFloat("SFXVolume", volume);
+    }
+
+    public void SetDialogueVolume(float volume)
+    {
+        dialogueVCA.setVolume(volume);
+        PlayerPrefs.SetFloat("DialogueVolume", volume);
     }
 
     public void PlayButtonClickSFX()

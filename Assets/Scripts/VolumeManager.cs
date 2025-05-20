@@ -11,6 +11,8 @@ public class VolumeManager : MonoBehaviour
     private VCA masterVCA;
     private VCA musicVCA;
     private VCA sfxVCA;
+    private VCA dialogueVCA;
+
 
     private bool isMuted = false;
     private float previousMasterVolume = 1f;
@@ -29,10 +31,13 @@ public class VolumeManager : MonoBehaviour
         masterVCA = RuntimeManager.GetVCA("vca:/Master");
         musicVCA = RuntimeManager.GetVCA("vca:/Music");
         sfxVCA = RuntimeManager.GetVCA("vca:/SFX");
+        dialogueVCA = RuntimeManager.GetVCA("vca:/Dialogue");
 
         float savedMaster = PlayerPrefs.GetFloat("MasterVolume", 1f);
         float savedMusic = PlayerPrefs.GetFloat("MusicVolume", 1f);
         float savedSFX = PlayerPrefs.GetFloat("SFXVolume", 1f);
+        float savedDialogue = PlayerPrefs.GetFloat("DialogueVolume", 1f);
+
         isMuted = PlayerPrefs.GetInt("IsMuted", 0) == 1;
 
         previousMasterVolume = savedMaster;
@@ -48,6 +53,7 @@ public class VolumeManager : MonoBehaviour
 
         musicVCA.setVolume(savedMusic);
         sfxVCA.setVolume(savedSFX);
+        dialogueVCA.setVolume(savedDialogue);
     }
 
     public void SetMasterVolume(float volume)
@@ -71,12 +77,18 @@ public class VolumeManager : MonoBehaviour
         sfxVCA.setVolume(volume);
         PlayerPrefs.SetFloat("SFXVolume", volume);
     }
+    
+    public void SetDialogueVolume(float volume)
+    {
+        dialogueVCA.setVolume(volume);
+        PlayerPrefs.SetFloat("DialogueVolume", volume);
+    }
 
     public void ToggleMute()
     {
         if (!isMuted)
         {
-            masterVCA.getVolume(out previousMasterVolume); 
+            masterVCA.getVolume(out previousMasterVolume);
             masterVCA.setVolume(0f);
             isMuted = true;
         }

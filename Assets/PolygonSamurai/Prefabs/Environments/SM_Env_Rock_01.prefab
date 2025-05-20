@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3320450}
   - component: {fileID: 2345788}
   - component: {fileID: 64613572956056476}
+  - component: {fileID: 1164816907538400222}
   m_Layer: 0
   m_Name: SM_Env_Rock_01
   m_TagString: Rock
@@ -99,10 +100,41 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43808078034770572, guid: 66aba5fa36fb1164db38bbe8b9c9eafd, type: 2}
+--- !u!114 &1164816907538400222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  EventReference:
+    Guid:
+      Data1: 183476169
+      Data2: 1310157268
+      Data3: -1202451051
+      Data4: -1707245186
+    Path: event:/Character/Gravel
+  Event: 
+  EventPlayTrigger: 3
+  EventStopTrigger: 4
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

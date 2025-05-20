@@ -20,11 +20,13 @@ public class MainMenuManager : MonoBehaviour
     public Slider masterSlider;
     public Slider musicSlider;
     public Slider sfxSlider;
+    public Slider dialogueSlider;
 
     [Header("VCA")]
     private VCA masterVCA;
     private VCA musicVCA;
     private VCA sfxVCA;
+    private VCA dialogueVCA;
 
 
 
@@ -34,10 +36,12 @@ public class MainMenuManager : MonoBehaviour
         optionsPanel.SetActive(false);
         audioPanel.SetActive(false);
         audioM.SetActive(false);
-        
+
         masterVCA = RuntimeManager.GetVCA("vca:/Master");
         musicVCA = RuntimeManager.GetVCA("vca:/Music");
         sfxVCA = RuntimeManager.GetVCA("vca:/SFX");
+        dialogueVCA = RuntimeManager.GetVCA("vca:/Dialogue");
+
     }
 
     void Start()
@@ -45,10 +49,14 @@ public class MainMenuManager : MonoBehaviour
         masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1f);
         musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1f);
         sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume", 1f);
+        dialogueSlider.value = PlayerPrefs.GetFloat("DialogueVolume", 1f);
+
 
         masterSlider.onValueChanged.AddListener((v) => VolumeManager.Instance.SetMasterVolume(v));
         musicSlider.onValueChanged.AddListener((v) => VolumeManager.Instance.SetMusicVolume(v));
         sfxSlider.onValueChanged.AddListener((v) => VolumeManager.Instance.SetSFXVolume(v));
+        dialogueSlider.onValueChanged.AddListener((v) => VolumeManager.Instance.SetDialogueVolume(v));
+
     }
 
     // Menu Panel
